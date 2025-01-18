@@ -13,14 +13,16 @@
     <footer>
         <div class="flex">
             <img src="https://www.designland.ru/upload/information_system_11/7/1/4/item_714/small_information_items_714.jpg" class="icona">
-            <div class="provodnik">
-                <p>Проводник</p>
-                <p>по достопримечательностям</p>
-                <p>г. Новороссийск</p>
+            <div class="mini">
+                <div class="provodnik">
+                    <p>Проводник</p>
+                    <p>по достопримечательностям</p>
+                    <p>г. Новороссийск</p>
+                </div>
+                <img src="https://png.klev.club/uploads/posts/2024-05/png-klev-club-v2jn-p-trubka-belaya-png-11.png" class="trubka" >
+                <p class="number_tel">+7-967-310-22-55</p>
             </div>
-            <img src="https://png.klev.club/uploads/posts/2024-05/png-klev-club-v2jn-p-trubka-belaya-png-11.png" class="trubka" >
-            <p class="number_tel">+7-967-310-22-55</p>
-            <div class="dropdown">
+                <div class="dropdown">
                 <button class="dropbtn"><img src="https://cdn-icons-png.flaticon.com/512/10080/10080216.png" class="menu"> </button>
                 <div class="dropdown-content">
                   <a href="#">Ссылка 1</a>
@@ -32,24 +34,290 @@
             
         </div>
     </footer>
-    <h2>текст</h2>
+
 </body>
+
+<div class="start-text">
+    <p>
+        Добро пожаловать в Новороссийск — город, богатый историей и культурой! 
+        Здесь расположено более 100 памятников, каждый из которых рассказывает уникальную историю. 
+        Новороссийск славится своими военно-морскими традициями, живописными пейзажами и значимыми историческими событиями. 
+        Откройте для себя наследие этого удивительного города!</p>
+</div>
 </html>
 
 
 <style>
 
+@media screen and (max-width:1900px) and (min-width: 1301px) {
 
-@media screen and (max-width: 1200px){
+.start-text{
+    margin-top: 0px;
+}
 
+.mini{
+
+display: flex;
+justify-content: space-around;
+}
+
+.menu{
+width: 40px;
+height: 40px;
+}
+
+.trubka{
+width: 40px;
+height: 40px;
+margin-top: 20px; 
+margin-left: 40px;
+}
+
+.menu{
+width: 50px;
+height: 50px;
+margin-top: 3px;
+
+}
+
+footer{
+background-image: url('https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3964.jpg?semt=ais_hybrid');
+white-space: nowrap;
+width: 100%;
+background-size: cover;
+position: fixed;
+}
+
+
+
+.flex{
+display: flex;
+justify-content: start;
+}
+
+.icona{
+width: 60px;
+height: 60px;
+margin-left: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+border-radius: 16px;
+
+}
+
+.provodnik{
+margin-top: 8px;
+line-height: 1px;
+
+font-size: 16px;
+margin-left: 10px;
+}
+
+.number_tel{
+margin-right: 150px;
+margin-top: 35px;
+font-size: 15px;
+}
+
+body{
+font-family: "Roboto", serif;
+}
+
+
+
+/* иконка меню и кнопка*/
+.dropbtn {
+background-color: #4CAF50;
+color: white;
+margin-top: 10px;
+border: none;
+margin-left: 105px;
+border-radius: 900px;
+
+}
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого ДВИГАЕТ ВСЕ ВМЕСТЕ, НУЖНО ДЛЯ МЕДИА ЗАПРОСОВ */
+.dropdown {
+
+display: inline-block;
+margin-left: 450px;
+
+
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+margin-left: 1px;
+
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
 }
 
 
 
 
 
-@media screen and (max-width: 998px){
+@media screen and (max-width:1300px) and (min-width: 1101px){
 
+
+
+.mini{
+
+display: flex;
+justify-content: space-around;
+}
+
+.menu{
+width: 40px;
+height: 40px;
+}
+
+.trubka{
+width: 40px;
+height: 40px;
+margin-top: 20px; 
+margin-left: 40px;
+}
+
+.menu{
+width: 50px;
+height: 50px;
+margin-top: 3px;
+
+}
+
+footer{
+background-image: url('https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3964.jpg?semt=ais_hybrid');
+white-space: nowrap;
+width: 100%;
+background-size: cover;
+position: fixed;
+}
+
+
+
+.flex{
+display: flex;
+justify-content: start;
+}
+
+.icona{
+width: 60px;
+height: 60px;
+margin-left: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+border-radius: 16px;
+
+}
+
+.provodnik{
+margin-top: 8px;
+line-height: 1px;
+
+font-size: 16px;
+margin-left: 10px;
+}
+
+.number_tel{
+margin-right: 150px;
+margin-top: 35px;
+font-size: 15px;
+}
+
+body{
+font-family: "Roboto", serif;
+}
+
+
+
+/* иконка меню и кнопка*/
+.dropbtn {
+background-color: #4CAF50;
+color: white;
+margin-top: 10px;
+border: none;
+margin-left: 105px;
+border-radius: 900px;
+
+}
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого ДВИГАЕТ ВСЕ ВМЕСТЕ, НУЖНО ДЛЯ МЕДИА ЗАПРОСОВ */
+.dropdown {
+
+display: inline-block;
+margin-left: 280px;
+
+
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+margin-left: 1px;
+
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+}
+
+
+
+
+
+
+@media screen and (max-width: 1100px) and (min-width: 999px){
+
+
+.mini{
+
+display: flex;
+justify-content: space-around;
+}
 
 .menu{
 width: 40px;
@@ -174,8 +442,137 @@ display: block;
 
 
 
-@media screen and (max-width: 882px){
+@media screen and (max-width: 998px) and (min-width: 883px){
 
+.mini{
+
+display: flex;
+justify-content: space-around;
+}
+
+.menu{
+width: 40px;
+height: 40px;
+}
+
+.trubka{
+width: 40px;
+height: 40px;
+margin-top: 20px; 
+margin-left: 40px;
+}
+
+.menu{
+width: 50px;
+height: 50px;
+margin-top: 3px;
+
+}
+
+footer{
+background-image: url('https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3964.jpg?semt=ais_hybrid');
+white-space: nowrap;
+width: 100%;
+background-size: cover;
+position: fixed;
+}
+
+
+
+.flex{
+display: flex;
+justify-content: start;
+}
+
+.icona{
+width: 60px;
+height: 60px;
+margin-left: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+border-radius: 16px;
+
+}
+
+.provodnik{
+margin-top: 8px;
+line-height: 1px;
+
+font-size: 16px;
+margin-left: 10px;
+}
+
+.number_tel{
+margin-right: 150px;
+margin-top: 35px;
+font-size: 15px;
+}
+
+body{
+font-family: "Roboto", serif;
+}
+
+
+
+/* иконка меню и кнопка*/
+.dropbtn {
+background-color: #4CAF50;
+color: white;
+margin-top: 10px;
+border: none;
+margin-left: 105px;
+border-radius: 900px;
+
+}
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого ДВИГАЕТ ВСЕ ВМЕСТЕ, НУЖНО ДЛЯ МЕДИА ЗАПРОСОВ */
+.dropdown {
+
+display: inline-block;
+margin-left: 50px;
+
+
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+margin-left: 1px;
+
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+
+}
+
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+}
+
+
+@media screen and (max-width: 882px) and (min-width: 751px){
+
+.mini{
+
+display: flex;
+justify-content: space-around;
+}
 
 .menu{
 width: 40px;
@@ -297,32 +694,20 @@ display: block;
 
 
 
+@media screen and (max-width: 750px){
 
-
-
-
-
-
-
-
-@media screen and (max-width: 730px){
-
-.menu{
-width: 40px;
-height: 40px;
-}
 
 .trubka{
-width: 20px;
-height: 20px;
+width: 30px;
+height: 30px;
 margin-top: 19px; 
 margin-left: 40px;
 }
 
 .number_tel{
-margin-right: 150px;
+margin-right: 100px;
 margin-top: 23px;
-font-size: 10px;
+font-size: 15px;
 }
 .menu{
 width: 40px;
@@ -339,16 +724,16 @@ background-size: cover;
 position: fixed;
 }
 
-
-
-.flex{
+.mini{
 display: flex;
 justify-content: space-around;
+
 }
 
+
 .icona{
-width: 34px;
-height: 34px;
+width: 90px;
+height: 90px;
 margin-left: 270px;
 margin-top: 10px;
 margin-bottom: 10px;
@@ -360,7 +745,7 @@ border-radius: 16px;
 margin-top: 8px;
 line-height: 1px;
 
-font-size: 9px;
+font-size: 15px;
 margin-left: 10px;
 }
 
@@ -386,7 +771,8 @@ border-radius: 900px;
 .dropdown {
 
 display: inline-block;
-padding-right: 250px;
+margin-left: 30ß0px;
+
 
 
 
@@ -424,16 +810,6 @@ display: block;
 
 
 }
-
-
-
-
-@media screen and (max-width: 680px){
-
-
-
-}
-
 
 
 
