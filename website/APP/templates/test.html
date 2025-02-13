@@ -3,69 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Меню с правого боку</title>
+    <title>Пример страницы с поиском</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Стили для поисковой системы */
+        #searchInput {
+            padding: 5px;
+            font-size: 16px;
+            width: 200px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .highlight {
+            background-color: yellow; /* Подсветка найденных слов */
+        }
 
+        /* Ваши стили для выпадающего меню */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #333833;
+        }
+    </style>
 </head>
 <body>
-
-    <button class="button" onclick="toggleMenu()">Меню</button>
-    <div class="menu" id="menu">
-        <h2>Меню</h2>
-        <ul>
-            <li>Пункт 1</li>
-            <li>Пункт 2</li>
-            <li>Пункт 3</li>
-            <li>Пункт 4</li>
-        </ul>
-        <button class="close-button" onclick="toggleMenu()">Закрыть</button>
-    </div>
+    <header>
+        <h1>Добро пожаловать на наш сайт!</h1>
+    </header>
+    <main>
+        <p>Это пример страницы с контентом. Здесь может быть много текста, изображений и других элементов.</p>
+        <p>Еще один абзац для примера.</p>
+    </main>
+    <footer>
+        <!-- Заменяем номер телефона на поисковую систему -->
+        <div>
+            <input type="text" id="searchInput" placeholder="Введите слово для поиска">
+            <button onclick="searchAndScroll()">Искать</button>
+        </div>
+    </footer>
 
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('active');
+        function searchAndScroll() {
+            const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+            if (!searchTerm) return; // Если поле пустое, ничего не делаем
+
+            const paragraphs = document.querySelectorAll('main p'); // Ищем только в <main>
+            let found = false; // Флаг для проверки, найдено ли слово
+
+            paragraphs.forEach(paragraph => {
+                const text = paragraph.innerText.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    paragraph.scrollIntoView({ behavior: 'smooth', block: 'center' }); // Прокручиваем к абзацу
+                    found = true;
+                    return; // Прерываем цикл после первого найденного совпадения
+                }
+            });
+
+            if (!found) {
+                alert('Слово не найдено!'); // Если слово не найдено, показываем сообщение
+            }
         }
     </script>
-
 </body>
 </html>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden; /* Запретить горизонтальную прокрутку */
-    }
-    .menu {
-        position: fixed;
-        right: -250px; /* Скрываем меню за пределами экрана */
-        top: 0;
-        width: 250px;
-        height: 100%;
-        background-color: #333;
-        color: white;
-        transition: right 0.3s ease; /* Анимация для выезда меню */
-        padding: 20px;
-    }
-    .menu.active {
-        right: 0; /* Показываем меню */
-    }
-    .button {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        padding: 10px 20px;
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    .close-button {
-        background-color: red; /* Кнопка для закрытия меню */
-        border-radius: 5px;
-        padding: 5px 10px;
-        margin-top: 20px;
-    }
-</style>

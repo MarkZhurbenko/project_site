@@ -31,12 +31,19 @@
         <div class="menu" id="menu">
             <h2>Меню</h2>
             <ul>
-                <a>Пункт 1</a><br><br>
-                <a>Пункт 2</a><br><br>
-                <a>Пункт 3</a><br><br>
-                <a>Пункт 4</a><br><br>
+                <a href="вставить урл страницы">
+                    <button>Пункт 1</button>
+                </a><br><br>
+                <a href="вставить урл страницы">
+                    <button>Пункт 2</button>
+                </a><br><br>
+                <a href="вставить урл страницы">
+                    <button>Пункт 3</button>
+                </a><br><br>
+                <a href="вставить урл страницы">
+                    <button>Пункт 4</button>
+                </a><br><br>
             </ul>
-            <button class="close-button" onclick="toggleMenu()">Закрыть</button>
         </div>
     </div>    
 
@@ -54,8 +61,9 @@
     <div class="text-map">
         <p class="start-text">Добро пожаловать в Новороссийск — город, богатый историей и культурой! Здесь расположено более 100 памятников, каждый из которых рассказывает уникальную историю. 
             Новороссийск славится своими военно-морскими традициями, живописными пейзажами и значимыми историческими событиями. Откройте для себя наследие этого удивительного города!</p>
-        <iframe class="map" src="https://www.google.com/maps/d/embed?mid=1fCKzimL0ewDJLZ5uCELzziD1JTLhVg8&ehbc=2E312F"></iframe>
+            <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ade2f33dd9b6f1df8a8c91e86a826bf746ed8db96ee019c8e151a8e225d1c2b8b&amp;source=constructor"></iframe>
     </div>
+    
     <p>hvfeuwf</p>
     <p>hvfeuwf</p>
     <p>hvfeuwf</p>
@@ -98,6 +106,16 @@
         const menu = document.getElementById('menu');
         menu.classList.toggle('active');
     }
+    document.addEventListener('click', function(event) {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.button');
+            const isClickInsideMenu = menu.contains(event.target);
+            const isClickInsideButton = button.contains(event.target);
+
+            if (menu.classList.contains('active') && !isClickInsideMenu && !isClickInsideButton) {
+                menu.classList.remove('active'); // Скрываем меню
+            }
+        });
 </script>
 
 <style>
@@ -138,23 +156,21 @@
             color: white;
             border: none;
             border-radius: 5px;
+            font-size: 20px;
             cursor: pointer;
         }
-        .close-button {
-            background-color: #01279a; /* Кнопка для закрытия меню */
-            border-radius: 5px;
-            color: #ddd;
-            padding: 5px 10px;
-            margin-top: 500px;
+        .button:hover{
+            background-color:#014877;
         }
 
 
 .map{
-    box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0.9);
+    box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0);
     border-radius: 10px;
     width: 640px;
     height: 380px;
-    margin-right: 10px;
+    margin-right: 40px;
+    filter: grayscale(0.3);
 
 }
 .start-text{
