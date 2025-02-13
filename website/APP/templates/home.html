@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,15 +23,16 @@
                     <p>г. Новороссийск</p></p>
                 </div>
             </div>
-            <div class ='num'>
-                <p><img src="https://png.klev.club/uploads/posts/2024-04/png-klev-club-ck9z-p-trubka-telefona-belaya-png-29.png" class="trubka" >
-                <p class="number_tel">+7-967-310-22-55</p></p>
-            </div>                
+
+            <div class="search-string">
+                <input type="text" id="searchInput" placeholder="Введите слово для поиска". size="50">
+                <button class="search" onclick="searchAndScroll()">Искать</button>
+            </div>
 
     <div class="knopka"> 
         <button class="button" onclick="toggleMenu()">Меню</button>
         <div class="menu" id="menu">
-            <h2>Меню</h2>
+            <h2>Возможные направления</h2>
             <ul>
                 <a href="вставить урл страницы">
                     <button>Пункт 1</button>
@@ -51,12 +54,12 @@
     </div>
 </footer><br><br><br><br><br>
 
-<body class="main">
+<body class="main" id="content">
     
 
-    <div class="test">
-        <h2 class="test2">ПУТЕВОДИТЕЛЬ ПО<br> НОВОРОССИЙСКУ: ГДЕ ПРОВЕСТИ ВРЕМЯ  И ЧТО ПОСЕТИТЬ</h2>
-        <img src="https://storage.yandexcloud.net/moskvichmag/uploads/2023/10/shutterstock_1324976240.jpg" class="test1">
+    <div class="start-header">
+        <h2 class="start-text-novoross">ПУТЕВОДИТЕЛЬ ПО<br> НОВОРОССИЙСКУ: ГДЕ ПРОВЕСТИ ВРЕМЯ  И ЧТО ПОСЕТИТЬ</h2>
+        <img src="https://storage.yandexcloud.net/moskvichmag/uploads/2023/10/shutterstock_1324976240.jpg" class="start-back-img">
     </div>
     <div class="text-map">
         <p class="start-text">Добро пожаловать в Новороссийск — город, богатый историей и культурой! Здесь расположено более 100 памятников, каждый из которых рассказывает уникальную историю. 
@@ -94,6 +97,8 @@
     <p>hvfeuwf</p>
     <p>hvfeuwf</p>
     <p>hvfeuwf</p>
+    <p>сотка</p>
+
 
 
 
@@ -116,38 +121,94 @@
                 menu.classList.remove('active'); // Скрываем меню
             }
         });
+
+        function searchAndScroll() {
+            const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+            if (!searchTerm) return; // Если поле пустое, ничего не делаем
+
+            const paragraphs = document.querySelectorAll('#content p'); // Получаем все абзацы
+            let found = false; // Флаг для проверки, найдено ли слово
+
+            paragraphs.forEach(paragraph => {
+                const text = paragraph.innerText.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    paragraph.scrollIntoView({ behavior: 'smooth', block: 'center' }); // Прокручиваем к абзацу
+                    found = true;
+                    return; // Прерываем цикл после первого найденного совпадения
+                }
+            });
+
+            if (!found) {
+                alert('Слово не найдено!'); // Если слово не найдено, показываем сообщение
+            }
+        }
+
 </script>
 
 <style>
 
 @media screen and (max-width:2100px) and (min-width: 751px){
+
+.search-string{
+    padding-top: 30px;
+    padding-left: 200px;
+    
+
+}
+
+#searchInput{
+    padding: 10px;
+    font-size: 18px;
+    width: 400px;
+    border: 2px solid;
+    border-radius: 10px;
+    
+    
+}
+
+.search{
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0.4);
+}
+
+.search:hover{
+    background-color: #014877;
+}
+
 .knopka{
     background-color: #007BFF;
 }
 
-    body {
+body {
             font-family: "Roboto", serif;
             margin: 0;
             padding: 0;
             overflow-x: hidden; /* Запретить горизонтальную прокрутку */
-        }
-        .menu {
+    }
+.menu {
             position: fixed;
             right: -350px; /* Скрываем меню за пределами экрана */
             top: 0;
-            width: 250px;
+            width: 290px;
             height: 100%;
             color: white;
             transition: right 0.5s ease; /* Анимация для выезда меню */
             padding: 20px;
             background-color: #007BFF;
-        }
-        .menu.active {
+    }
+.menu.active {
             right: 0; /* Показываем меню */
             background-color: #007BFF;
             padding-right: 50px;
         }
-        .button {
+.button {
             position: absolute;
             top: 20px;
             right: 20px;
@@ -159,7 +220,7 @@
             font-size: 20px;
             cursor: pointer;
         }
-        .button:hover{
+.button:hover{
             background-color:#014877;
         }
 
@@ -185,11 +246,11 @@
     justify-content: space-between;
 }
 
-.test{
+.start-header{
     background-color: #014877;
     position: relative;
 }
-.test2{
+.start-text-novoross{
     color: white;
     width: 50%;
     padding-left: 100px;
@@ -198,7 +259,7 @@
     position: absolute;
 }
 
-.test1{
+.start-back-img{
     width: 45%;
     height: 45%;
     margin-left: 700px;
@@ -259,7 +320,7 @@ float: left;
 }
 
 .provodnik{
-margin-top: 35px;
+margin-top: 38px;
 line-height: 1px;
 font-size: 16px;
 margin-left: 85px;
