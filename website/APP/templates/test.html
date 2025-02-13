@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню с правого боку</title>
+
+</head>
+<body>
+
+    <button class="button" onclick="toggleMenu()">Меню</button>
+    <div class="menu" id="menu">
+        <h2>Меню</h2>
+        <ul>
+            <li>Пункт 1</li>
+            <li>Пункт 2</li>
+            <li>Пункт 3</li>
+            <li>Пункт 4</li>
+        </ul>
+        <button class="close-button" onclick="toggleMenu()">Закрыть</button>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Запретить горизонтальную прокрутку */
+    }
+    .menu {
+        position: fixed;
+        right: -250px; /* Скрываем меню за пределами экрана */
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        color: white;
+        transition: right 0.3s ease; /* Анимация для выезда меню */
+        padding: 20px;
+    }
+    .menu.active {
+        right: 0; /* Показываем меню */
+    }
+    .button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .close-button {
+        background-color: red; /* Кнопка для закрытия меню */
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-top: 20px;
+    }
+</style>

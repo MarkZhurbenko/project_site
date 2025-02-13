@@ -21,4 +21,5 @@ from APP.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home), #http://127.0.0.1:8000/home/
+    path('test/', test),
 ]

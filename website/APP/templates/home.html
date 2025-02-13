@@ -25,15 +25,22 @@
                 <p><img src="https://png.klev.club/uploads/posts/2024-04/png-klev-club-ck9z-p-trubka-telefona-belaya-png-29.png" class="trubka" >
                 <p class="number_tel">+7-967-310-22-55</p></p>
             </div>                
+
+    <div class="knopka"> 
+        <button class="button" onclick="toggleMenu()">Меню</button>
+        <div class="menu" id="menu">
+            <h2>Меню</h2>
+            <ul>
+                <a>Пункт 1</a><br><br>
+                <a>Пункт 2</a><br><br>
+                <a>Пункт 3</a><br><br>
+                <a>Пункт 4</a><br><br>
+            </ul>
+            <button class="close-button" onclick="toggleMenu()">Закрыть</button>
         </div>
-            <div class="dropdown">
-            <button class="dropbtn"><img src="https://cdn-icons-png.flaticon.com/512/10027/10027469.png" class="menu"> </button>
-            <div class="dropdown-content">
-              <a href="#">Ссылка 1</a>
-              <a href="#">Ссылка 2</a>
-              <a href="#">Ссылка 3</a>
-            </div>
-          </div> 
+    </div>    
+
+
     </div>
 </footer><br><br><br><br><br>
 
@@ -86,10 +93,62 @@
 
 </html>
 
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+    }
+</script>
 
 <style>
 
 @media screen and (max-width:2100px) and (min-width: 751px){
+.knopka{
+    background-color: #007BFF;
+}
+
+    body {
+            font-family: "Roboto", serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Запретить горизонтальную прокрутку */
+        }
+        .menu {
+            position: fixed;
+            right: -350px; /* Скрываем меню за пределами экрана */
+            top: 0;
+            width: 250px;
+            height: 100%;
+            color: white;
+            transition: right 0.5s ease; /* Анимация для выезда меню */
+            padding: 20px;
+            background-color: #007BFF;
+        }
+        .menu.active {
+            right: 0; /* Показываем меню */
+            background-color: #007BFF;
+            padding-right: 50px;
+        }
+        .button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .close-button {
+            background-color: #01279a; /* Кнопка для закрытия меню */
+            border-radius: 5px;
+            color: #ddd;
+            padding: 5px 10px;
+            margin-top: 500px;
+        }
+
+
 .map{
     box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0.9);
     border-radius: 10px;
@@ -154,18 +213,11 @@ margin-left: 30%;
 float: left;
 }
 
-.menu{
-width: 50px;
-height: 50px;
-margin-top: 3px;
-border-radius: 66px;
-
-}
 
 footer{
 background-color: #01279a;
 white-space: nowrap;
-width: 99%;
+width: 100%;
 background-size: cover;
 position: fixed;
 z-index: 1;
@@ -204,69 +256,6 @@ margin-top: 50px;
 font-size: 15px;
 color: #ddd;
 }
-
-
-body{
-font-family: "Roboto", serif;
-}
-
-
-
-/* иконка меню и кнопка*/
-.dropbtn {
-background-color: #01279a;
-color: white;
-margin-top: 10px;
-border: none;
-margin-left: 105px;
-border-radius: 900px;
-
-}
-
-/* Контейнер <div> - необходим для размещения выпадающего содержимого ДВИГАЕТ ВСЕ ВМЕСТЕ, НУЖНО ДЛЯ МЕДИА ЗАПРОСОВ */
-.dropdown {
-
-display: inline-block;
-margin-right: 20px;
-padding-top: 13px;
-
-
-}
-
-/* Выпадающее содержимое (скрыто по умолчанию) */
-.dropdown-content {
-display: none;
-position: absolute;
-background-color: #f1f1f1;
-min-width: 160px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
-margin-left: 1px;
-
-}
-
-/* Ссылки внутри выпадающего списка */
-.dropdown-content a {
-color: black;
-padding: 12px 16px;
-text-decoration: none;
-display: block;
-
-}
-
-/* Изменение цвета выпадающих ссылок при наведении курсора */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Показать выпадающее меню при наведении курсора */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
-.dropdown:hover .dropbtn {background-color:#01279a;}
-
-}
-
-
-
 
 
 
@@ -398,6 +387,6 @@ display: block;
 
 
 }
-
+}
 
 </style>
