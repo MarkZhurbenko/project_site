@@ -32,7 +32,7 @@
     <div class="knopka"> 
         <button class="button" onclick="toggleMenu()">Меню</button>
         <div class="menu" id="menu">
-            <h2>Возможные направления</h2>
+            <h2 class="vozm-stor">Возможные направления</h2>
             <ul>
                 <a href="вставить урл страницы">
                     <button>Пункт 1</button>
@@ -50,9 +50,8 @@
         </div>
     </div>    
 
-
     </div>
-</footer><br><br><br><br><br>
+</footer><br><br><br>
 
 <body class="main" id="content">
     
@@ -151,7 +150,7 @@
 
 .search-string{
     padding-top: 30px;
-    padding-left: 200px;
+    padding-left: 10vw;
     
 
 }
@@ -159,7 +158,7 @@
 #searchInput{
     padding: 10px;
     font-size: 18px;
-    width: 400px;
+    width: 24vw;
     border: 2px solid;
     border-radius: 10px;
     
@@ -210,14 +209,14 @@ body {
         }
 .button {
             position: absolute;
-            top: 20px;
+            top:25px;
             right: 20px;
-            padding: 10px 20px;
+            padding: 7px 20px;
             background-color: #007BFF;
             color: white;
             border: none;
             border-radius: 5px;
-            font-size: 20px;
+            font-size: 2vw;
             cursor: pointer;
         }
 .button:hover{
@@ -228,8 +227,8 @@ body {
 .map{
     box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0);
     border-radius: 10px;
-    width: 640px;
-    height: 380px;
+    width: 64vw;
+    height: 30vw;
     margin-right: 40px;
     filter: grayscale(0.3);
 
@@ -249,20 +248,21 @@ body {
 .start-header{
     background-color: #014877;
     position: relative;
+    padding-top: 35px;
 }
 .start-text-novoross{
     color: white;
     width: 50%;
-    padding-left: 100px;
-    padding-top: 50px;
-    font-size: 260%;
+    padding-left: 130px;
+    padding-top: 20px;
+    font-size: 3.8vw;
     position: absolute;
 }
 
 .start-back-img{
     width: 45%;
     height: 45%;
-    margin-left: 700px;
+    margin-left: 48vw;
     margin-bottom: 50px;
     margin-top: 50px;
     border-radius: 25px;
@@ -333,137 +333,214 @@ margin-top: 50px;
 font-size: 15px;
 color: #ddd;
 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 @media screen and (max-width: 750px){
 
-
-.start-text{
-    padding-top: 170px;
-    width: 60%;
+.search-string{
+    padding-top: 17px;
     padding-left: 50px;
+    
+
 }
 
-.all{
-    padding-left: 60px;
+#searchInput{
+    padding: 10px;
+    font-size: 10px;
+    width: 100px;
+    border: 2px solid;
+    border-radius: 10px;
+    
+    
+}
+
+.search{
+    width: 50px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    font-size: 10px;
+    box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0.4);
+}
+
+.search:hover{
+    background-color: #014877;
+}
+
+.knopka{
+    background-color: #007BFF;
+}
+
+body {
+            font-family: "Roboto", serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Запретить горизонтальную прокрутку */
+    }
+.menu {
+            position: fixed;
+            right: -350px; /* Скрываем меню за пределами экрана */
+            top: 0;
+            width: 110px;
+            height: 100%;
+            color: white;
+            transition: right 0.5s ease; /* Анимация для выезда меню */
+            padding: 20px;
+            background-color: #007BFF;
+    }
+.menu.active {
+            right: 0; /* Показываем меню */
+            background-color: #007BFF;
+            padding-right: 50px;
+        }
+.button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+.button:hover{
+            background-color:#014877;
+        }
+.vozm-stor{
+    font-size: 12px;
+}
+
+.map{
+    box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0);
+    border-radius: 10px;
+    width: 340px;
+    height: 180px;
+    margin-right: 40px;
+    filter: grayscale(0.3);
+
+}
+.start-text{
+    width: 50%;
+    margin-top: 10px;
+    text-align: center;
+}
+.text-map{
+    padding-top: 20px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.start-header{
+    background-color: #014877;
+    position: relative;
+}
+.start-text-novoross{
+    color: white;
+    width: 50%;
+    padding-left: 100px;
+    padding-top: 50px;
+    font-size: 140%;
+    position: absolute;
+}
+
+.start-back-img{
+    width: 45%;
+    height: 45%;
+    margin-left: 300px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 25px;
+    box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0.5);
+
 }
 
 .num{
-    margin-top: 30px;
-    padding-left: 110px;
+    margin-left: 7%;
 }
 
+.mini{
+
+display: flex;
+justify-content: space-around;
+margin-left: 20px;
+}
+
+
 .trubka{
-width: 30px;
-height: 30px;
-margin-top: 1px; 
-padding-left: 5px;
+width: 40px;
+height: 40px;
+margin-top: 20px; 
+margin-left: 30%;
 float: left;
 }
 
-.number_tel{
-padding-left: 2px;
-padding-top: 10px;
-font-size: 10px;
-}
-.menu{
-width: 40px;
-height: 40px;
-margin-top: 3px;
-
-}
 
 footer{
-background-image: url('https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3964.jpg?semt=ais_hybrid');
+background-color: #01279a;
 white-space: nowrap;
-width: 98%;
+width: 100%;
 background-size: cover;
 position: fixed;
+z-index: 1;
+
 }
-/*
-.mini{
+
+
+
+.flex{
 display: flex;
-justify-content: start;
+justify-content: space-between;
 }
-*/
+
 .icona{
-width: 60px;
-height: 60px;
-margin-left: 1px;
+width: 40px;
+height: 40px;
+margin-left: 10px;
 margin-top: 10px;
 margin-bottom: 10px;
 border-radius: 16px;
-float: inline-start;
+float: left;
 
 }
 
 .provodnik{
-padding-top: 20px;
+margin-top: 34px;
 line-height: 1px;
-
-font-size: 10px;
-margin-left: 70px;
+font-size: 9px;
+margin-left: 65px;
+color: #ddd;
 }
 
-
-body{
-font-family: "Roboto", serif;
+.number_tel{
+margin-right: 150px;
+margin-top: 50px;
+font-size: 15px;
+color: #ddd;
 }
-
-
-
-/* иконка меню и кнопка*/
-.dropbtn {
-background-color: #ffffff;
-color: white;
-margin-top: 10px;
-border: none;
-margin-left: 105px;
-border-radius: 900px;
 
 }
 
-/* Контейнер <div> - необходим для размещения выпадающего содержимого ДВИГАЕТ ВСЕ ВМЕСТЕ, НУЖНО ДЛЯ МЕДИА ЗАПРОСОВ */
-.dropdown {
-
-display: inline-block;
-position: absolute;
-right: 0;
-}
-
-/* Выпадающее содержимое (скрыто по умолчанию) */
-.dropdown-content {
-display: none;
-position: absolute;
-background-color: #f1f1f1;
-min-width: 160px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
-
-
-}
-
-/* Ссылки внутри выпадающего списка */
-.dropdown-content a {
-color: black;
-padding: 12px 16px;
-text-decoration: none;
-display: block;
-
-}
-
-/* Изменение цвета выпадающих ссылок при наведении курсора */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Показать выпадающее меню при наведении курсора */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
-.dropdown:hover .dropbtn {background-color: #333833;}
-
-
-}
-}
 
 </style>
