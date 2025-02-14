@@ -65,6 +65,11 @@
             Новороссийск славится своими военно-морскими традициями, живописными пейзажами и значимыми историческими событиями. Откройте для себя наследие этого удивительного города!</p>
             <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ade2f33dd9b6f1df8a8c91e86a826bf746ed8db96ee019c8e151a8e225d1c2b8b&amp;source=constructor"></iframe>
     </div>
+
+    <div class="museum">
+        <h1 class="text-museum">Музеи</h1>
+        <img class="img-museum" src="https://avatars.mds.yandex.net/get-altay/7730113/2a0000018fa3e6731e6e466eee0bae3d5a32/L">
+    </div>
     
     <p>hvfeuwf</p>
     <p>hvfeuwf</p>
@@ -147,24 +152,34 @@
 <style>
 
 @media screen and (max-width:2100px) and (min-width: 751px){
-
+.museum{
+    position: relative;
+    width: 10vw;
+    height: 25vw;
+}
+.text-museum{
+    position: absolute;
+    color: #ffffff;
+    z-index: 1;
+}
+.img-museum{
+    filter: blur(8px);
+    border-radius: 10px;
+    border: solid;
+    width: 30vw;
+    height: 15vw;
+}
 .search-string{
     padding-top: 30px;
     padding-left: 10vw;
-    
-
 }
-
 #searchInput{
     padding: 10px;
     font-size: 18px;
     width: 24vw;
     border: 2px solid;
     border-radius: 10px;
-    
-    
 }
-
 .search{
     width: 70px;
     height: 40px;
@@ -176,15 +191,12 @@
     font-size: 15px;
     box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0.4);
 }
-
 .search:hover{
     background-color: #014877;
 }
-
 .knopka{
     background-color: #007BFF;
 }
-
 body {
             font-family: "Roboto", serif;
             margin: 0;
@@ -280,8 +292,6 @@ display: flex;
 justify-content: space-around;
 margin-left: 20px;
 }
-
-
 .trubka{
 width: 40px;
 height: 40px;
@@ -297,17 +307,12 @@ white-space: nowrap;
 width: 100%;
 background-size: cover;
 position: fixed;
-z-index: 1;
-
+z-index: 2;
 }
-
-
-
 .flex{
 display: flex;
 justify-content: space-between;
 }
-
 .icona{
 width: 60px;
 height: 60px;
@@ -316,9 +321,7 @@ margin-top: 10px;
 margin-bottom: 10px;
 border-radius: 16px;
 float: left;
-
 }
-
 .provodnik{
 margin-top: 38px;
 line-height: 1px;
@@ -326,7 +329,6 @@ font-size: 16px;
 margin-left: 85px;
 color: #ddd;
 }
-
 .number_tel{
 margin-right: 150px;
 margin-top: 50px;
