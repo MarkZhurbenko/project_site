@@ -25,26 +25,26 @@
             </div>
 
             <div class="search-string">
-                <input type="text" id="searchInput" placeholder="Введите слово для поиска". size="50">
+                <input type="text" id="searchInput" placeholder="Введите интересующую локацию". size="50">
                 <button class="search" onclick="searchAndScroll()">Искать</button>
             </div>
 
     <div class="knopka"> 
         <button class="button" onclick="toggleMenu()">Меню</button>
         <div class="menu" id="menu">
-            <h2 class="vozm-stor">Возможные направления</h2>
+            <h2 class="vozm-stor">Возможные направления:</h2>
             <ul>
-                <a href="вставить урл страницы">
-                    <button>Пункт 1</button>
+                <a href="museum">
+                    <button class="menu-link">Музеи</button>
                 </a><br><br>
                 <a href="вставить урл страницы">
-                    <button>Пункт 2</button>
+                    <button class="menu-link">Пункт 2</button>
                 </a><br><br>
                 <a href="вставить урл страницы">
-                    <button>Пункт 3</button>
+                    <button class="menu-link">Пункт 3</button>
                 </a><br><br>
                 <a href="вставить урл страницы">
-                    <button>Пункт 4</button>
+                    <button class="menu-link">Пункт 4</button>
                 </a><br><br>
             </ul>
         </div>
@@ -68,43 +68,33 @@
 
     <div class="museum">
         <h1 class="text-museum">Музеи</h1>
-        <img class="img-museum" src="https://avatars.mds.yandex.net/get-altay/7730113/2a0000018fa3e6731e6e466eee0bae3d5a32/L">
+        <p class="text-mus-start">Музеи Новороссийска — это уникальные культурные центры, рассказывающие о богатой истории и героическом прошлом города. 
+            Среди них выделяется Новороссийский исторический музей-заповедник, где представлены экспозиции, посвященные Великой Отечественной войне и истории региона. 
+            Посетители могут познакомиться с археологическими находками, морскими традициями и современными достижениями города. Особый интерес представляет мемориал «Малая Земля», 
+            посвященный подвигу советских солдат. 
+            Музеи Новороссийска — это место, где оживает история, а каждый экспонат рассказывает свою уникальную историю.</p><br>
+            <button class="button-museum">
+                <a href="museum" class="link-museum">Узнать какие музеи стоит посетить</a>
+            </button>
     </div>
-    
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
-    <p>hvfeuwf</p>
+    <div class="gallery">
+        <div class="photo">
+            <img src="https://avatars.mds.yandex.net/get-altay/7690462/2a00000187d82e1ea4d0c56e918760e18698/L_height">
+        </div>
+        <div class="photo">
+            <img src="https://lh3.googleusercontent.com/proxy/N-wTI9_8q5AtlyBOrX0eeFjHE36z--4Fz9zpnjQ5KVFkZsWBeGJRTVdJYDgeIJhqKUkGrBZOPambJYaUIHoVJjXt6zEqApOanmI4A47qAN0q0TPAlaadgR18RRoCKqckYO4LLlDpeg" alt="Фото 2">
+        </div>
+        <div class="photo">
+            <img src="https://lh3.googleusercontent.com/proxy/n89Roi67xN_wLNbcikWyRIx1z6FkT1zqmnvIIQcnf0i_WNkfwZe6bOLz2_AKeUfmCZreBdYLz4lhuRzdh11oEUFj3yFmQ1p-PI5tSyQLUGPWwD5rbkkoJkvI_h_iTnIIlHqmF6-tEGuOT_6oWhETNUMCbx_nDdIz0HRFTWP4" alt="Фото 3">
+        </div>
+        <div class="photo">
+            <img src="https://avatars.mds.yandex.net/get-altay/14456919/2a000001937e42d74c1309bcb3eac6bac865/L" alt="Фото 4">
+        </div>
+        <div class="photo">
+            <img src="https://avatars.mds.yandex.net/get-altay/10238647/2a0000018fa3e66d4a532b29c6d92421fa44/L_height" alt="Фото 5">
+        </div>
+    </div>
     <p>сотка</p>
-
-
-
 
 </body>
 
@@ -152,22 +142,71 @@
 <style>
 
 @media screen and (max-width:2100px) and (min-width: 751px){
+.menu-link{
+    width: 160%;
+    margin-left: -60px;
+    font-size: 2vw;
+    border: none;
+    background-color: #007BFF;
+    color: #ffffff;
+}
+.menu-link:hover{
+    background-color: #ddd;
+}
+.vozm-stor{
+    padding-bottom: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.gallery {
+            width: 100%; /* Ширина на весь экран */
+            overflow-x: auto; /* Горизонтальный скролл */
+            display: flex;
+            gap: 20px; /* Зазор между фотографиями */
+            padding: 20px; /* Отступы вокруг галереи */
+            scroll-snap-type: x mandatory; /* Привязка к фотографиям при скролле */
+            scroll-behavior: smooth; /* Плавный скролл */
+            background-color: #014877; /* фон за фотографиями */
+        }
+.photo {
+            flex: 0 0 auto; /* Запрет на сжатие и растяжение */
+            width: 600px; /* Фиксированная ширина фотографии */
+            height: 400px; /* Фиксированная высота фотографии */
+            border-radius: 5px; /* Скругление углов */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start; /* Привязка к началу фотографии */
+        }
+.photo img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px; /* Скругление углов у изображения */
+        }
+
 .museum{
-    position: relative;
-    width: 10vw;
-    height: 25vw;
+    padding-top: 40px;
+    padding-left: 5vw;
+}
+.button-museum{
+    font-size: 1.8vw;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.button-museum:hover{
+    background-color:#014877
 }
 .text-museum{
-    position: absolute;
-    color: #ffffff;
-    z-index: 1;
+    font-size: 5vw;
 }
-.img-museum{
-    filter: blur(8px);
-    border-radius: 10px;
-    border: solid;
-    width: 30vw;
-    height: 15vw;
+.text-mus-start{
+    font-size: 1.6vw;
 }
 .search-string{
     padding-top: 30px;
@@ -228,7 +267,7 @@ body {
             color: white;
             border: none;
             border-radius: 5px;
-            font-size: 2vw;
+            font-size: 1.3vw;
             cursor: pointer;
         }
 .button:hover{
@@ -239,15 +278,17 @@ body {
 .map{
     box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0);
     border-radius: 10px;
-    width: 64vw;
-    height: 30vw;
+    width: 45vw;
+    height: 28vw;
     margin-right: 40px;
     filter: grayscale(0.3);
 
 }
 .start-text{
-    width: 50%;
+    width: 40%;
     margin-top: 100px;
+    padding-left: 25px;
+    font-size: 1.6vw;
     text-align: center;
 }
 .text-map{

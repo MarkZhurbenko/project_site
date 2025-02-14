@@ -7,3 +7,6 @@ def home(request):
 
 def test(request):
     return render(request, 'test.html')
+
+def museum(requests):
+    return render(requests, 'museum.html')
