@@ -1,0 +1,264 @@
+
+@media screen and (max-width: 750px){
+
+    
+    .menu-link{
+        width: 260%;
+        margin-left: -60px;
+        font-size: 2.5vw;
+        border: none;
+        background-color: #007BFF;
+        color: #ffffff;
+    }
+    .menu-link:hover{
+        background-color: #ddd;
+    }
+    .vozm-stor{
+        padding-bottom: 40px;
+    }
+    
+    a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .gallery {
+                width: 100%; /* Ширина на весь экран */
+                overflow-x: auto; /* Горизонтальный скролл */
+                display: flex;
+                gap: 10px; /* Зазор между фотографиями */
+                padding: 10px; /* Отступы вокруг галереи */
+                scroll-snap-type: x mandatory; /* Привязка к фотографиям при скролле */
+                scroll-behavior: smooth; /* Плавный скролл */
+                background-color: #014877; /* фон за фотографиями */
+            }
+    .photo {
+                flex: 0 0 auto; /* Запрет на сжатие и растяжение */
+                width: 150px; /* Фиксированная ширина фотографии */
+                height: 100px; /* Фиксированная высота фотографии */
+                border-radius: 5px; /* Скругление углов */
+    
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                scroll-snap-align: start; /* Привязка к началу фотографии */
+            }
+    .photo img {
+                max-width: 100%;
+                max-height: 100%;
+                border-radius: 10px; /* Скругление углов у изображения */
+            }
+    
+    .museum{
+        padding-top: 40px;
+        padding-left: 5vw;
+    }
+    .button-museum{
+        font-size: 1.8vw;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+    .button-museum:hover{
+        background-color:#014877
+    }
+    .text-museum{
+        font-size: 5vw;
+    }
+    .text-mus-start{
+        font-size: 1.6vw;
+    }
+    
+    
+    
+    .search-string{
+        padding-top: 17px;
+        padding-left: 50px;
+        
+    
+    }
+    
+    #searchInput{
+        padding: 10px;
+        font-size: 10px;
+        width: 100px;
+        border: 2px solid;
+        border-radius: 10px;
+        
+        
+    }
+    
+    .search{
+        width: 50px;
+        height: 20px;
+        border-radius: 5px;
+        background-color: #007BFF;
+        color: #ffffff;
+        cursor: pointer;
+        border: none;
+        font-size: 10px;
+        box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0.4);
+    }
+    
+    .search:hover{
+        background-color: #014877;
+    }
+    
+    .knopka{
+        background-color: #007BFF;
+    }
+    
+    body {
+                font-family: "Roboto", serif;
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden; /* Запретить горизонтальную прокрутку */
+        }
+    .menu {
+                position: fixed;
+                right: -350px; /* Скрываем меню за пределами экрана */
+                top: 0;
+                width: 110px;
+                height: 100%;
+                color: white;
+                transition: right 0.5s ease; /* Анимация для выезда меню */
+                padding: 20px;
+                background-color: #007BFF;
+        }
+    .menu.active {
+                right: 0; /* Показываем меню */
+                background-color: #007BFF;
+                padding-right: 50px;
+            }
+    .button {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                padding: 10px 20px;
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 10px;
+                cursor: pointer;
+            }
+    .button:hover{
+                background-color:#014877;
+            }
+    .vozm-stor{
+        font-size: 12px;
+    }
+    
+    .map{
+        box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0);
+        border-radius: 10px;
+        width: 60vw;
+        height: 38vwpx;
+        margin-left: 40px;
+        filter: grayscale(0.3);
+    
+    }
+    .start-text{
+        width: 40%;
+        margin-top: 10px;
+        font-size: 2vw;
+        text-align: center;
+    }
+    .text-map{
+        padding-top: 20px;
+        font-size: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .start-header{
+        background-color: #014877;
+        position: relative;
+    }
+    .start-text-novoross{
+        color: white;
+        width: 50%;
+        padding-left: 100px;
+        padding-top: 50px;
+        font-size: 140%;
+        position: absolute;
+    }
+    
+    .start-back-img{
+        width: 45%;
+        height: 45%;
+        margin-left: 300px;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        border-radius: 25px;
+        box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0.5);
+    
+    }
+    
+    .num{
+        margin-left: 7%;
+    }
+    
+    .mini{
+    
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+    }
+    
+    
+    .trubka{
+    width: 40px;
+    height: 40px;
+    margin-top: 20px; 
+    margin-left: 30%;
+    float: left;
+    }
+    
+    
+    footer{
+    background-color: #01279a;
+    white-space: nowrap;
+    width: 100%;
+    background-size: cover;
+    position: fixed;
+    z-index: 1;
+    
+    }
+    
+    
+    
+    .flex{
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    .icona{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    float: left;
+    
+    }
+    
+    .provodnik{
+    margin-top: 34px;
+    line-height: 1px;
+    font-size: 9px;
+    margin-left: 65px;
+    color: #ddd;
+    }
+    
+    .number_tel{
+    margin-right: 150px;
+    margin-top: 50px;
+    font-size: 15px;
+    color: #ddd;
+    }
+    
+    }
+    
