@@ -1,11 +1,14 @@
 
-@media screen and (max-width: 750px){
+@media screen and (max-width:2100px) and (min-width: 751px){
 
-    
+        .link-museum{
+            font-size: 1.3vw;
+            padding-bottom: 4px;
+        }
     .menu-link{
-        width: 260%;
+        width: 160%;
         margin-left: -60px;
-        font-size: 2.5vw;
+        font-size: 2vw;
         border: none;
         background-color: #007BFF;
         color: #ffffff;
@@ -25,18 +28,17 @@
                 width: 100%; /* Ширина на весь экран */
                 overflow-x: auto; /* Горизонтальный скролл */
                 display: flex;
-                gap: 10px; /* Зазор между фотографиями */
-                padding: 10px; /* Отступы вокруг галереи */
+                gap: 20px; /* Зазор между фотографиями */
+                padding: 20px; /* Отступы вокруг галереи */
                 scroll-snap-type: x mandatory; /* Привязка к фотографиям при скролле */
                 scroll-behavior: smooth; /* Плавный скролл */
                 background-color: #014877; /* фон за фотографиями */
             }
     .photo {
                 flex: 0 0 auto; /* Запрет на сжатие и растяжение */
-                width: 150px; /* Фиксированная ширина фотографии */
-                height: 100px; /* Фиксированная высота фотографии */
+                width: 550px; /* Фиксированная ширина фотографии */
+                height: 400px; /* Фиксированная высота фотографии */
                 border-radius: 5px; /* Скругление углов */
-    
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -69,46 +71,34 @@
     .text-mus-start{
         font-size: 1.6vw;
     }
-    
-    
-    
     .search-string{
-        padding-top: 17px;
-        padding-left: 50px;
-        
-    
+        padding-top: 30px;
+        padding-left: 10vw;
     }
-    
     #searchInput{
         padding: 10px;
-        font-size: 10px;
-        width: 100px;
+        font-size: 18px;
+        width: 24vw;
         border: 2px solid;
         border-radius: 10px;
-        
-        
     }
-    
     .search{
-        width: 50px;
-        height: 20px;
+        width: 70px;
+        height: 40px;
         border-radius: 5px;
         background-color: #007BFF;
         color: #ffffff;
         cursor: pointer;
         border: none;
-        font-size: 10px;
+        font-size: 15px;
         box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0.4);
     }
-    
     .search:hover{
         background-color: #014877;
     }
-    
     .knopka{
         background-color: #007BFF;
     }
-    
     body {
                 font-family: "Roboto", serif;
                 margin: 0;
@@ -119,7 +109,7 @@
                 position: fixed;
                 right: -350px; /* Скрываем меню за пределами экрана */
                 top: 0;
-                width: 110px;
+                width: 290px;
                 height: 100%;
                 color: white;
                 transition: right 0.5s ease; /* Анимация для выезда меню */
@@ -133,41 +123,40 @@
             }
     .button {
                 position: absolute;
-                top: 20px;
+                top:25px;
                 right: 20px;
-                padding: 10px 20px;
+                padding: 7px 20px;
                 background-color: #007BFF;
                 color: white;
                 border: none;
                 border-radius: 5px;
-                font-size: 10px;
+                font-size: 1.3vw;
                 cursor: pointer;
             }
     .button:hover{
                 background-color:#014877;
             }
-    .vozm-stor{
-        font-size: 12px;
-    }
+    
     
     .map{
         box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0);
         border-radius: 10px;
-        width: 60vw;
-        height: 38vwpx;
-        margin-left: 40px;
+        width: 45vw;
+        height: 28vw;
+        margin-right: 40px;
         filter: grayscale(0.3);
     
     }
     .start-text{
         width: 40%;
-        margin-top: 10px;
-        font-size: 2vw;
+        margin-top: 100px;
+        padding-left: 25px;
+        font-size: 1.6vw;
         text-align: center;
     }
     .text-map{
         padding-top: 20px;
-        font-size: 15px;
+        font-size: 20px;
         display: flex;
         justify-content: space-between;
     }
@@ -175,20 +164,21 @@
     .start-header{
         background-color: #014877;
         position: relative;
+        padding-top: 35px;
     }
     .start-text-novoross{
         color: white;
         width: 50%;
-        padding-left: 100px;
-        padding-top: 50px;
-        font-size: 140%;
+        padding-left: 130px;
+        padding-top: 20px;
+        font-size: 3.8vw;
         position: absolute;
     }
     
     .start-back-img{
         width: 45%;
         height: 45%;
-        margin-left: 300px;
+        margin-left: 48vw;
         margin-bottom: 50px;
         margin-top: 50px;
         border-radius: 25px;
@@ -206,8 +196,6 @@
     justify-content: space-around;
     margin-left: 20px;
     }
-    
-    
     .trubka{
     width: 40px;
     height: 40px;
@@ -217,48 +205,40 @@
     }
     
     
-    footer{
+    header{
     background-color: #01279a;
     white-space: nowrap;
     width: 100%;
     background-size: cover;
     position: fixed;
-    z-index: 1;
-    
+    z-index: 2;
     }
-    
-    
-    
     .flex{
     display: flex;
     justify-content: space-between;
     }
-    
     .icona{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 16px;
     float: left;
-    
     }
-    
     .provodnik{
-    margin-top: 34px;
+    margin-top: 38px;
     line-height: 1px;
-    font-size: 9px;
-    margin-left: 65px;
+    font-size: 16px;
+    margin-left: 85px;
     color: #ddd;
     }
-    
     .number_tel{
     margin-right: 150px;
     margin-top: 50px;
     font-size: 15px;
     color: #ddd;
     }
-    
     }
+    
     
