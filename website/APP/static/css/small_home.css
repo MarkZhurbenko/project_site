@@ -2,6 +2,24 @@
 @media screen and (max-width: 750px){
 
     
+    .int-loc{
+        padding-top: 40px;
+        padding-left: 5vw;
+    }
+    .text-int-loc{
+        font-size: 7vw;
+    }
+    .text-int-loc-start{
+        font-size: 5vw;
+        padding-top: 10px;
+    }
+    .photo-int-loc{
+        margin-top: 10px;
+        border-radius: 5px;
+        width: 87vw; /* Фиксированная ширина фотографии */
+        height: 66.8vw; /* Фиксированная высота фотографии */
+        
+    }
     .menu-link{
         width: 260%;
         margin-left: -60px;
@@ -64,7 +82,7 @@
         padding-left: 5vw;
     }
     .button-museum{
-        font-size: 4vw;
+        font-size: 6vw;
         background-color: #007BFF;
         color: white;
         border: none;
@@ -75,10 +93,10 @@
         background-color:#014877
     }
     .text-museum{
-        font-size: 5vw;
+        font-size: 7vw;
     }
     .text-mus-start{
-        font-size: 3.6vw;
+        font-size: 5vw;
         width: 90%;
     }
     
@@ -158,7 +176,7 @@
                 color: white;
                 border: none;
                 border-radius: 5px;
-                font-size: 10px;
+                font-size: 15px;
                 cursor: pointer;
                 margin-right: 40px;
             }
@@ -172,23 +190,21 @@
     .map{
         box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0);
         border-radius: 10px;
-        width: 40vw;
-        height: 28vwpx;
-        margin-right: 30px;
-
+        width: 90%;
+        height: 98vwpx;
+        margin-left: 20px;
         filter: grayscale(0.3);
     
     }
     .start-text{
-        width: 40%;
+        width: 90%;
         margin-top: 10px;
-        font-size: 3vw;
-        text-align: center;
+        font-size: 5vw;
+        margin-left: 20px;
     }
     .text-map{
         padding-top: 20px;
         font-size: 15px;
-        display: flex;
         justify-content: space-between;
     }
     
@@ -202,14 +218,14 @@
         width: 50%;
         padding-left: 20px;
         padding-top: 30px;
-        font-size: 100%;
+        font-size: 120%;
         position: absolute;
     }
     
     .start-back-img{
-        width: 45%;
-        height: 45%;
-        margin-left: 170px;
+        width: 60%;
+        height: 65%;
+        margin-left: 130px;
         margin-bottom: 20px;
         margin-top: 40px;
         border-radius: 15px;

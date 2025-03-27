@@ -13,3 +13,6 @@ def museum(requests):
 
 def monuments(requests):
     return render(requests, 'monuments.html')
+
+def interesting_location(requests):
+    return render(requests, 'interesting_location.html')

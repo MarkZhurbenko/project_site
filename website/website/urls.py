@@ -23,5 +23,7 @@ urlpatterns = [
     path('home/', home), #http://127.0.0.1:8000/home/
     path('test/', test), #http://127.0.0.1:8000/test/
     path('home/museum/', museum), #http://127.0.0.1:8000/home/museum/
-    path('home/monuments/', monuments),
+    path('home/monuments/', monuments), #http://127.0.0.1:8000/home/monuments/
+    path('home/interesting_location', interesting_location), #http://127.0.0.1:8000/home/interesting_location
+    
 ]
