@@ -15,7 +15,7 @@
     
     
 </head>
-<header>
+<header>{% block header %}
     <div class="flex">
         <div class="mini">
             <div class="all">
@@ -51,7 +51,7 @@
     </div>    
 
     </div>
-</header><br><br><br>
+</header><br><br><br>{%endblock%}
 
 <body class="main" id="content">
     
@@ -128,39 +128,39 @@
         </button>
     </div>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3><span class="emoji">🔥</span> Хочешь связаться с нами?<br>Вот наши данные!</h3>
-                <p>✉️ mlol6519@gmail.com</p>
-                <p>📞 +7-967-310-22-5</p>
-                <div class="social-links">
-                    <a href="https://m.vk.com/id459053622"><i>VK</i></a>
-                    <a href="https://t.me/mmarkc1"><i>TG</i></a>
-
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3><span class="emoji">💬</span> Есть идеи?</h3>
-                <p>Хочешь добавить новое место или знаешь лайфхак для туристов? Кидай предложения в личку!</p>
-                <p>Вместе сделаем город ещё круче! <span class="emoji">🤙</span></p>
-            </div>
-            
-            <div class="footer-section">
-                <h3><span class="emoji">📸</span> Твой Новорос</h3>
-                <p>Делись своими тревел-сториз с хештегом:</p>
-                <span class="hashtag">#НоворосТоп</span>
-                <p>Самые яркие фото попадут на главную!</p>
-            </div>
-            
-            <div class="copyright">
-                <p>© 2024 Новороссийск – не просто город, а настроение! <span class="emoji">🌊</span></p>
-            </div>
-        </div>
-    </footer>
 
 </body>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3><span class="emoji">🔥</span> Хочешь связаться с нами?<br>Вот наши данные!</h3>
+            <p>✉️ mlol6519@gmail.com</p>
+            <p>📞 +7-967-310-22-5</p>
+            <div class="social-links">
+                <a href="https://m.vk.com/id459053622"><i>VK</i></a>
+                <a href="https://t.me/mmarkc1"><i>TG</i></a>
+
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3><span class="emoji">💬</span> Есть идеи?</h3>
+            <p>Хочешь добавить новое место или знаешь лайфхак для туристов? Кидай предложения в личку!</p>
+            <p>Вместе сделаем город ещё круче! <span class="emoji">🤙</span></p>
+        </div>
+        
+        <div class="footer-section">
+            <h3><span class="emoji">📸</span> Твой Новорос</h3>
+            <p>Делись своими тревел-сториз с хештегом:</p>
+            <span class="hashtag">#НоворосТоп</span>
+            <p>Самые яркие фото попадут на главную!</p>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2024 Новороссийск – не просто город, а настроение! <span class="emoji">🌊</span></p>
+        </div>
+    </div>
+</footer>
 
 </html>
 
