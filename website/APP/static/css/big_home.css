@@ -1,7 +1,7 @@
 
 @media screen and (max-width:2100px) and (min-width: 751px){
 
-        .link-museum{
+    .link-museum{
             font-size: 1.3vw;
             padding-bottom: 4px;
         }
@@ -115,6 +115,7 @@
                 transition: right 0.5s ease; /* Анимация для выезда меню */
                 padding: 20px;
                 background-color: #007BFF;
+                z-index: 3;
         }
     .menu.active {
                 right: 0; /* Показываем меню */
