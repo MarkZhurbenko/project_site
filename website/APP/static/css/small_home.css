@@ -21,6 +21,17 @@
         text-decoration: none;
         color: #ffffff;
     }
+    .gallary-monuments{
+        display: flex;
+        padding-left: 10px;
+        padding-top: 20px;
+        gap: 20px;
+    }
+    .photo-mon{
+        flex: 0 0 auto; /* Запрет на сжатие и растяжение */
+        width: 44vw; /* Фиксированная ширина фотографии */
+        height: 33.8vw; /* Фиксированная высота фотографии */
+    }
     .gallery {
                 width: 100%; /* Ширина на весь экран */
                 overflow-x: auto; /* Горизонтальный скролл */
@@ -53,7 +64,7 @@
         padding-left: 5vw;
     }
     .button-museum{
-        font-size: 2.8vw;
+        font-size: 4vw;
         background-color: #007BFF;
         color: white;
         border: none;
