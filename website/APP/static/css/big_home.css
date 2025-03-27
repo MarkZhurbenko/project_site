@@ -67,7 +67,7 @@
                 padding: 20px; /* Отступы вокруг галереи */
                 scroll-snap-type: x mandatory; /* Привязка к фотографиям при скролле */
                 scroll-behavior: smooth; /* Плавный скролл */
-                background-color: #014877; /* фон за фотографиями */
+                background-color: #2a5298; /* фон за фотографиями */
             }
     .photo {
                 flex: 0 0 auto; /* Запрет на сжатие и растяжение */
@@ -277,6 +277,95 @@
     font-size: 15px;
     color: #ddd;
     }
+
+
+    .footer {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: white;
+        padding: 40px 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-top: 3px solid #ffd700;
+        bottom: 0;
+
     }
+    
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #ffd700;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .footer-section h3::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: #ff6b6b;
+    }
+    
+    .footer-section p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    
+    .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .social-links a {
+        color: white;
+        background: rgba(255, 255, 255, 0.1);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+        background: #ffd700;
+        color: #1e3c72;
+        transform: translateY(-3px);
+    }
+    
+    .hashtag {
+        display: inline-block;
+        background: rgba(255, 215, 0, 0.2);
+        padding: 5px 10px;
+        border-radius: 20px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    
+    .copyright {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+    }
+    
+    .emoji {
+        font-size: 1.2rem;
+        margin-right: 5px;
+    }
+}
     
     
