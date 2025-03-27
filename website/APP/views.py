@@ -10,3 +10,6 @@ def test(request):
 
 def museum(requests):
     return render(requests, 'museum.html')
+
+def monuments(requests):
+    return render(requests, 'monuments.html')
