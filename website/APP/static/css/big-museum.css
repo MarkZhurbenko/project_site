@@ -28,7 +28,9 @@
     background-color: #007BFF;
     border-radius: 5px;
 }
-
+.photo-one{
+    margin-left: 35px;
+}
 .button-museum-home{
     margin-left: 80px;
     background-color: #007BFF;

@@ -26,7 +26,11 @@
         background-color: #007BFF;
         border-radius: 5px;
     }
-    
+    .photo-one{
+        margin-left: 5px;
+        width: 90vw;
+        height: 80vw;
+    }
 .button-museum-home{
     background-color: #007BFF;
     border-radius: 3px;
