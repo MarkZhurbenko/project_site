@@ -1,5 +1,32 @@
 @media screen and (max-width: 750px){
-
+    .gallary-planet{
+        margin-left: 4.5vw;
+    }
+    
+    .photo-planet{
+        width: 90vw;
+        height: 74vw;
+        margin-left: 5px;
+    }
+    
+    
+    .min-boss-text{
+        width: 80%;
+        font-size: 4.6vw;
+        margin-left: 20px;
+    }
+    
+    .text-boss{
+        font-size: 8vw;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .teg{
+        color: black;
+        background-color: #007BFF;
+        border-radius: 5px;
+    }
+    
 .button-museum-home{
     background-color: #007BFF;
     border-radius: 3px;
