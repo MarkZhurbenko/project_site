@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 
 def home(request):
@@ -16,3 +16,6 @@ def monuments(requests):
 
 def interesting_location(requests):
     return render(requests, 'interesting_location.html')
+
+def some_view(request):
+    return redirect('home')  # перенаправление на главную

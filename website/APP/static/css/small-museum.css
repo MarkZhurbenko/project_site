@@ -1,3 +1,39 @@
 @media screen and (max-width: 750px){
 
+.button-museum-home{
+    background-color: #007BFF;
+    border-radius: 3px;
+    border: none;
+    margin-left: 5px;
+}
+
+.start-header1{
+    background-color: #014877;
+    position: relative;
+    padding-top: 95px;
+}
+
+.start-img-museum{
+    width: 80vw;
+    height: 50vw;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+.head-text-museum{
+    font-size: 8vw;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: white;
+    width: 90%;
+    z-index: 1;
+}
+.head-mini{
+    margin-top: -50px;
+    margin-left: 30px;
+    font-size: 3.5vw;
+    color: #ffffff;
+}
+
+
 }

@@ -6,9 +6,18 @@
 <link rel="stylesheet" href= "{% static 'css/small-museum.css' %}">
 {%endblock%}
 
+{%block footer%} 
+<button class="button-museum-home">
+    <a href="{% url 'home' %}" class="link-museum-home">На главную</a>
+</button>
+
+{%endblock%}
+
 {%block content%}
 <div class="start-header1">
-    <h2>МУЗЕИ ГОРОДА-ГЕРОЯ<br>САМАЯ БОГАТАЯ ИСТОРИЯ КРАЯ</h2>
+    <h2 class="head-text-museum">МУЗЕИ ГОРОДА-ГЕРОЯ<br>САМАЯ БОГАТАЯ<br> ИСТОРИЯ КРАЯ</h2><br><br><br>
+    <p class="head-mini">Посетите самые уникальные музеи Новороссийска</p>
+    <img src="{% static 'images/start-museum.webp'%}" class="start-img-museum">
 </div>
 <h1>барабулька</h1>
 {%endblock%}

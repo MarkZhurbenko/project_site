@@ -103,9 +103,8 @@
     
     
     .search-string{
-        padding-top: 17px;
-        padding-left: 50px;
-    
+        padding-top: 27px;
+        margin-left: -20px;
     
     }
     
@@ -115,9 +114,7 @@
         width: 100px;
         border: 2px solid;
         border-radius: 10px;
-        margin-left: -70px;
-        
-        
+        margin-left: -90px;
         
     }
     
