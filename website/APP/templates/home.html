@@ -37,13 +37,13 @@
         <div class="menu" id="menu">
             <h2 class="vozm-stor">Возможные направления:</h2>
             <ul>
-                <a href="museum">
+                <a href="{% url 'museum' %}">
                     <button class="menu-link">Музеи</button>
                 </a><br><br>
-                <a href="monuments">
+                <a href="{% url 'monuments' %}">
                     <button class="menu-link">Памятники</button>
                 </a><br><br>
-                <a href="interesting_location">
+                <a href="{% url 'interesting_location' %}">
                     <button class="menu-link">Места для прогулок</button>
                 </a><br><br>
             </ul>
@@ -74,7 +74,7 @@
             посвященный подвигу советских солдат. 
             Музеи Новороссийска — это место, где оживает история, а каждый экспонат рассказывает свою уникальную историю.</p><br>
             <button class="button-museum">
-                <a href="museum" class="link-museum">Подробнее о музеях</a>
+                <a href="{% url 'museum' %}" class="link-museum">Подробнее о музеях</a>
             </button>
     </div>
     <div class="gallery">
@@ -102,7 +102,7 @@
             до утончённых скульптур вроде «Девушки на дельфине» – каждый памятник города рассказывает свою уникальную историю, создавая неповторимый облик Новороссийска.
             Эти памятники – не просто достопримечательности, а символы памяти, мужества и любви к родному краю, которые обязательно стоит увидеть, посещая город-герой.</p><br>
             <button class="button-museum">
-                <a href="monuments" class="link-museum">Подробнее о памятниках</a>
+                <a href="{% url 'monuments' %}" class="link-museum">Подробнее о памятниках</a>
             </button>
     </div>
     <div class="gallary-monuments">
@@ -124,7 +124,7 @@
                 <img src="{%static 'images/interesting-location-h.jpg'%}" class="photo-int-loc">
         </div>
         <button class="button-museum">
-            <a href="interesting_location" class="link-museum">Подробнее о красивых местах</a>
+            <a href="{% url 'interesting_location' %}" class="link-museum">Подробнее о красивых местах</a>
         </button>
     </div>
 

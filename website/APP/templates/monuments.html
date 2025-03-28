@@ -1,13 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-{%load static%}
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/monuments.css' %}">
-    <title>Monuments</title>
-</head>
-<body>
-    <p>инфа про памятники</p>
-</body>
-</html>
+{% extends 'base.html'%}
+{% load static %}
+
+{%block css%}
+<link rel="stylesheet" href= "{% static 'css/big-monuments.css' %}">
+<link rel="stylesheet" href= "{% static 'css/small-monuments.css' %}">
+{%endblock%}
+
+{%block footer%} 
+<button class="button-museum-home">
+    <a href="{% url 'home' %}" class="link-museum-home">На главную</a>
+</button>
+
+{%endblock%}
+
+{% block content%}
+
+<div class="head-monuments">
+    <img src="{% static 'images/pam-head.jpg'%}" class="pam-start-img">
+    <h1 class="pam-start-text">ГЛАВНЫЕ ПАМЯТНИКИ НОВОРОССИЙСКА<br>ИСТОРИЯ ОЛИТАЯ В МЕТАЛЛЕ</h1><br>
+
+</div>
+<br><br><br>v<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}
