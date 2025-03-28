@@ -84,7 +84,6 @@
 </footer>
 
 </html>
-
 <script>
     function toggleMenu() {
         const menu = document.getElementById('menu');
@@ -101,25 +100,32 @@
             }
         });
 
-        function searchAndScroll() {
-            const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
-            if (!searchTerm) return; // Если поле пустое, ничего не делаем
 
-            const paragraphs = document.querySelectorAll('#content p'); // Получаем все абзацы
-            let found = false; // Флаг для проверки, найдено ли слово
 
-            paragraphs.forEach(paragraph => {
-                const text = paragraph.innerText.toLowerCase();
-                if (text.includes(searchTerm)) {
-                    paragraph.scrollIntoView({ behavior: 'smooth', block: 'center' }); // Прокручиваем к абзацу
-                    found = true;
-                    return; // Прерываем цикл после первого найденного совпадения
-                }
-            });
 
-            if (!found) {
-                alert('Слово не найдено!'); // Если слово не найдено, показываем сообщение
+    function searchAndScroll() {
+        const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+        if (!searchTerm) return;
+
+        // Изменён селектор - ищем по классу text, где содержится основной контент
+        const contentElements = document.querySelectorAll('.text');
+        let found = false;
+
+        contentElements.forEach(element => {
+            const text = element.innerText.toLowerCase();
+            if (text.includes(searchTerm)) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                found = true;
+                // Подсветка найденного текста
+                element.style.backgroundColor = '#ffff99';
+                setTimeout(() => {
+                    element.style.backgroundColor = '';
+                }, 3000);
             }
-        }
+        });
 
+        if (!found) {
+            alert('Совпадений не найдено. Попробуйте другие ключевые слова.');
+        }
+    }
 </script>
