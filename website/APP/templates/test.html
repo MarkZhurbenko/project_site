@@ -1,138 +1,106 @@
 <!DOCTYPE html>
 <html lang="ru">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Достопримечательности Новороссийска</title>
+    <title>Карточки с изображениями</title>
     <style>
-        /* Основные стили футера */
-        .footer {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 40px 20px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            border-top: 3px solid #ffd700;
+        .body-cart {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
         }
         
-        .footer-container {
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
         }
         
-        .footer-section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: #ffd700;
-            position: relative;
-            display: inline-block;
+        .card {
+            width: calc(33.33% - 14px);
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
         
-        .footer-section h3::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: #ff6b6b;
+        .card:hover {
+            transform: translateY(-5px);
         }
         
-        .footer-section p {
-            line-height: 1.6;
-            margin-bottom: 15px;
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
         
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
+        .card-content {
+            padding: 15px;
         }
         
-        .social-links a {
-            color: white;
-            background: rgba(255, 255, 255, 0.1);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
+        .card-title {
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #333;
         }
         
-        .social-links a:hover {
-            background: #ffd700;
-            color: #1e3c72;
-            transform: translateY(-3px);
+        .card-text {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 0;
         }
         
-        .hashtag {
-            display: inline-block;
-            background: rgba(255, 215, 0, 0.2);
-            padding: 5px 10px;
-            border-radius: 20px;
-            margin-top: 10px;
-            font-weight: bold;
+        @media (max-width: 900px) {
+            .card {
+                width: calc(50% - 10px);
+            }
         }
         
-        .copyright {
-            grid-column: 1 / -1;
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-        }
-        
-        .emoji {
-            font-size: 1.2rem;
-            margin-right: 5px;
-        }
-        
-        @media (max-width: 768px) {
-            .footer-container {
-                grid-template-columns: 1fr;
+        @media (max-width: 600px) {
+            .card {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Основное содержимое сайта -->
-    
-    <!-- Футер -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3><span class="emoji">🔥</span> Новорос на связи</h3>
-                <p>Заценил крутые места? Лови ещё больше топовых локаций в наших соцсетях!</p>
-                <div class="social-links">
-                    <a href="#"><i>VK</i></a>
-                    <a href="#"><i>TG</i></a>
-                    <a href="#"><i>YT</i></a>
-                    <a href="#"><i>OK</i></a>
+    <div class="body-cart">
+        <div class="cards-container">
+            <!-- Карточка 1 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/400x300" alt="Пример изображения" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Заголовок карточки 1</h3>
+                    <p class="card-text">Это пример текста для карточки. Здесь может быть описание изображения или другая полезная информация, которая помещается в пару предложений.</p>
                 </div>
             </div>
             
-            <div class="footer-section">
-                <h3><span class="emoji">💬</span> Есть идеи?</h3>
-                <p>Хочешь добавить новое место или знаешь лайфхак для туристов? Кидай предложения в личку!</p>
-                <p>Вместе сделаем город ещё круче! <span class="emoji">🤙</span></p>
+            <!-- Карточка 2 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/400x300" alt="Пример изображения" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Заголовок карточки 2</h3>
+                    <p class="card-text">Еще один пример текста для карточки. Вы можете заменить это содержимое на свое, включая изображение и текст по вашему выбору.</p>
+                </div>
             </div>
             
-            <div class="footer-section">
-                <h3><span class="emoji">📸</span> Твой Новорос</h3>
-                <p>Делись своими тревел-сториз с хештегом:</p>
-                <span class="hashtag">#НоворосТоп</span>
-                <p>Самые яркие фото попадут на главную!</p>
+            <!-- Карточка 3 -->
+            <div class="card">
+                <img src="{% static 'images/planet1.png' %}" alt="Пример изображения" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Заголовок карточки 3</h3>
+                    <p class="card-text">Третья карточка с примером текста. Обратите внимание, что все карточки имеют одинаковую высоту и выравниваются в ряд.</p>
+                </div>
             </div>
-            
-            <div class="copyright">
-                <p>© 2024 Новороссийск – не просто город, а настроение! <span class="emoji">🌊</span></p>
-            </div>
-        </div>
-    </footer>
+    </div>
 </body>
 </html>

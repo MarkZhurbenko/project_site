@@ -19,12 +19,13 @@
         height: 51vw;
     }
     .pam-start-text{
-        margin-top: -500px;
+        margin-top: -45vw;
         margin-left: 60px;
-        font-size: 6.4vw;
+        font-size: 6vw;
         z-index: 1;
         color: beige;
-        text-shadow: 1px 1px 1px #000;
+        text-shadow: 0.3px 2px 1px #000;
+        font-family: Verdana, Geneva, sans-serif;
 
     }
 }

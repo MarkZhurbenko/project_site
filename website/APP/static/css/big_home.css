@@ -105,6 +105,7 @@
     }
     .text-mus-start{
         font-size: 1.6vw;
+        margin-right: 90px;
     }
     .search-string{
         padding-top: 30px;
@@ -135,7 +136,7 @@
         background-color: #007BFF;
     }
     body {
-                font-family: "Roboto", serif;
+        font-family: Verdana, Geneva, sans-serif;
                 margin: 0;
                 padding: 0;
                 overflow-x: hidden; /* Запретить горизонтальную прокрутку */

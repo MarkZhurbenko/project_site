@@ -5,4 +5,24 @@
         border: none;
         margin-left: 5px;
     }
+
+    .head-monuments{
+        padding-top: 36px;
+        position: relative;
+
+    }
+    .pam-start-img{
+        width: 100%;
+        height: 61vw;
+    }
+    .pam-start-text{
+        margin-top: -35vw;
+        margin-left: 20px;
+        font-size: 4.5vw;
+        z-index: 1;
+        color: beige;
+        text-shadow: 2px 2px 1px #000;
+        font-family: Verdana, Geneva, sans-serif;
+
+    }
 }
