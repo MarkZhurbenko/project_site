@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-{%load static%}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/interesting_location.css' %}">
-    <title>Interesting location</title>
-</head>
-<body>
-    <h1>Инфа про локации</h1>
-</body>
-</html>
+{% extends 'base.html'%}
+{% load static %}
+
+{%block css%}
+<link rel="stylesheet" href= "{% static 'css/big-park.css' %}">
+<link rel="stylesheet" href= "{% static 'css/small-park.css' %}">
+{%endblock%}
+
+
+
+{%block footer%} 
+<button class="button-museum-home">
+    <a href="{% url 'home' %}" class="link-museum-home">На главную</a>
+</button>
+{%endblock%}

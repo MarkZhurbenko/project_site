@@ -287,6 +287,8 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         border-top: 3px solid #ffd700;
         bottom: 0;
+        width: 100%;
+        margin-left: -20px;
 
     }
     
