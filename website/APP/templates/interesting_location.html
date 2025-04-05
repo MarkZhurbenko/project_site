@@ -6,29 +6,23 @@
 <link rel="stylesheet" href= "{% static 'css/small-park.css' %}">
 {%endblock%}
 
-
-
 {%block footer%} 
 <button class="button-museum-home">
     <a href="{% url 'home' %}" class="link-museum-home">На главную</a>
 </button>
+
 {%endblock%}
 
-{% block content %}
-<div class="start-park-head">
-    <img src="{% static 'images/more.jpg'%}" class="start-more-img">
-    <h1 class="t">Лучшие места для прогулки в новроссисйке<br><br><br>Парки,скверы,набержная и краисвые места</h1>
+{% block content%}
+<br>
+<div class="start-head-park">
+    <img src="{% static 'images/more2.JPG'%}" class="start-img-park">
+    <h1 class="start-text-park">Самые красивые места Новороссийска</h1>
 </div>
-
-
-
-
-
-
 
 <div class="museum-boss">
     <div class="text">
-        <h1 class="text-boss">Парк имени Фрунзе</h1>
+        <h1 class="text-boss">Планетарий имени Ю.А. Гагарина</h1>
         <p class="min-boss-text">Музей космонавтики в Новороссийском планетарии – где звёзды становятся ближе!
 
             Погрузитесь в историю покорения Вселенной в уникальном музее при планетарии. Здесь вас ждёт:<br>  
@@ -58,4 +52,5 @@
         <img class="photo-planet" src="{% static 'images/planet2.webp'%}">
     </div>
 </div>
+
 {% endblock %}

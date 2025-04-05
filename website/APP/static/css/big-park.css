@@ -1,11 +1,104 @@
 @media screen and (max-width:2100px) and (min-width: 751px){
-    .start-park-head{
+    .button-museum-home{
+        margin-left: 80px;
+        background-color: #007BFF;
+        border: none;
+        width: 90px;
+        height: 40px;
+        border-radius: 3px;
+    }
+
+    .start-head-park{
+        position: relative;
+    }
+
+    .start-text-park{
+        color: rgb(0, 0, 0);
+        z-index: 1;
+        margin-top: -27vw;
+        font-size: 6vw;
+        color: white;
+        margin-left: 5vw;
+
+    }
+    .start-img-park{
+        width: 100vw;
+        height: 50vw;
+        margin-top: -150px;
+    }
+    .gallary-planet{
+        display: flex;
+        gap: 30px;
+        margin-left: 4.5vw;
+    
+    }
+    
+    .photo-planet{
+        width: 44vw;
+        height: 34vw;
+    }
+    
+    
+    .min-boss-text{
+        width: 80%;
+        font-size: 1.6vw;
+        margin-left: 50px;
+    }
+    
+    .text-boss{
+        font-size: 4vw;
+        text-align: center;
+        margin-top: 80px;
+    }
+    .teg{
+        color: black;
+        background-color: #007BFF;
+        border-radius: 5px;
+    }
+    .photo-one{
+        margin-left: 35px;
+    }
+    .photo-one1{
+        width: 80%;
+        height: 60%;
+        margin-left: 55px;
+    }
+    .button-museum-home{
+        margin-left: 80px;
+        background-color: #007BFF;
+        border: none;
+        width: 90px;
+        height: 40px;
+        border-radius: 3px;
+    }
+    
+    
+    .start-header1{
+        background-color: #014877;
+        position: relative;
+        padding-top: 55px;
+        padding-bottom: 20px;
         display: flex;
     }
-    .start-more-img{
-        width: 100%;
+    
+    .start-img-museum{
+        margin-left: 50px;
+        width: 47vw;
+        
     }
-    .t{
-        margin-left: 200px;
+    
+    .head-text-museum{
+        font-size: 3vw;
+        margin-left: 50px;
+        margin-top: 50px;
+        color: white;
+        z-index: 1;
     }
+    .head-mini{
+        margin-top: 300px;
+        margin-left: -400px;
+        font-size: 1.5vw;
+        color: white;
+    }
+    
 }
