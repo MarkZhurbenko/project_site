@@ -23,7 +23,7 @@
     .menu-link{
         width: 260%;
         margin-left: -60px;
-        font-size: 2.5vw;
+        font-size: 5.5vw;
         border: none;
         background-color: #007BFF;
         color: #ffffff;
@@ -32,12 +32,13 @@
         background-color: #ddd;
     }
     .vozm-stor{
-        padding-bottom: 40px;
+        padding-bottom: 70px;
     }
     
     a{
         text-decoration: none;
         color: #ffffff;
+        font-size: 4.3vw;
     }
     .gallary-monuments{
         display: flex;
@@ -82,12 +83,13 @@
         padding-left: 5vw;
     }
     .button-museum{
-        font-size: 6vw;
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        margin-bottom: 15px;
+        appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #007BFF;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
     }
     .button-museum:hover{
         background-color:#014877
@@ -119,14 +121,14 @@
     }
     
     .search{
-        width: 50px;
-        height: 20px;
+        width: 18vw;
+        height: 8vw;
         border-radius: 5px;
         background-color: #007BFF;
         color: #ffffff;
         cursor: pointer;
         border: none;
-        font-size: 10px;
+        font-size: 16px;
         box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0.4);
         margin-top: 70px;
         text-align: left;
@@ -162,7 +164,7 @@
     .menu.active {
                 right: 0; /* Показываем меню */
                 background-color: #007BFF;
-                padding-right: 50px;
+                padding-right: 70px;
             }
     .button {
                 position: absolute;
@@ -188,7 +190,7 @@
         box-shadow: 1.5rem 1rem 3rem rgba(0,0,0,0);
         border-radius: 10px;
         width: 90%;
-        height: 98vwpx;
+        height: 78vw;
         margin-left: 20px;
         filter: grayscale(0.3);
     
@@ -207,7 +209,7 @@
     
     .start-header{
         background-color: #014877;
-        margin-top: 30px;
+        margin-top: 70px;
         position: relative;
     }
     .start-text-novoross{
@@ -215,13 +217,13 @@
         width: 50%;
         padding-left: 20px;
         padding-top: 30px;
-        font-size: 120%;
+        font-size: 140%;
         position: absolute;
     }
     
     .start-back-img{
         width: 60%;
-        height: 65%;
+        height: 35vw;
         margin-left: 130px;
         margin-bottom: 20px;
         margin-top: 40px;
