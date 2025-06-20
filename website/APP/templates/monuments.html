@@ -1,224 +1,219 @@
-{% extends 'base.html'%}
-{% load static %}
+{% extends 'base.html'%}                                                                                                                                                                                    
+ {% load static %}                                                                                                                                                                                           
+                                                                                                                                                                                                             
+ {%block css%}                                                                                                                                                                                               
+<link rel="stylesheet" href= "{% static 'css/big-monuments.css' %}">                                                                                                                                        
+<link rel="stylesheet" href= "{% static 'css/small-monuments.css' %}">                                                                                                                                      
+ {%endblock%}                                                                                                                                                                                                
+ {%block footer%}                                                                                                                                                                                            
+ <button class="button-museum-home">                                                                                                                                                                         
+      <a href="{% url 'home' %}" class="link-museum-home">На главную</a>                                                                                                                                      
+  </button>                                                                                                                                                                                                   
+                                                                                                                                                                                                              
+  {%endblock%}                                                                                                                                                                                                
+                                                                                                                                                                                                              
+  {% block content%}                                                                                                                                                                                          
+                                                                                                                                                                                                              
+  <div class="head-monuments">                                                                                                                                                                                
+      <img src="{% static 'images/more1.jpg'%}" class="pam-start-img">                                                                                                                                        
+      <h1 class="pam-start-text">ГЛАВНЫЕ ПАМЯТНИКИ НОВОРОССИЙСКА:<br>ИСТОРИЯ,ОТЛИТАЯ В МЕТАЛЛЕ</h1><br>                                                                                                       
+  </div>                                                                                                                                                                                                      
+                                                                                                                                                                                                              
+  <br><br><br>                                                                                                                                                                                                
+  <br><br>                                                                                                                                                                                                    
+  <div class="body-cart">                                                                                                                                                                                     
+      <div class="cards-container">                                                                                                                                                                           
+          <!-- 1. Малая земля -->                                                                                                                                                                             
+          <div class="card">                                                                                                                                                                                  
+              <img src="{% static 'images/1.webp' %}" alt="Малая земля" class="card-image">                                                                                                                   
+              <div class="card-content">                                                                                                                                                                      
+                  <h3 class="card-title">Мемориал "Малая земля"</h3>                                                                                                                                          
+                 <p class="card-text">Легендарный мемориал в память о героической обороне плацдарма в 1943 году.</p>                                                                                         
+                  <p class="card-address">Адрес: г. Новороссийск, Суджукская Коса 1А</p>                                                                                                                      
+              </div>                                                                                                                                                                                          
+          </div>
 
-{%block css%}
-<link rel="stylesheet" href= "{% static 'css/big-monuments.css' %}">
-<link rel="stylesheet" href= "{% static 'css/small-monuments.css' %}">
-{%endblock%}
+        <!-- 2. Неизвестному матросу -->                                                                                                                                                                    
+          <div class="card">                                                                                                                                                                                  
+              <img src="{% static 'images/2.webp' %}" alt="Неизвестному матросу" class="card-image">                                                                                                          
+              <div class="card-content">                                                                                                                                                                      
+                  <h3 class="card-title">Памятник Неизвестному матросу</h3>                                                                                                                                   
+                  <p class="card-text">Символ мужества моряков-черноморцев. Высота — 7 метров.</p>                                                                                                            
+                  <p class="card-address">Адрес: Набережная адмирала Серебрякова, 27/1 (у Морвокзала)</p>                                                                                                     
+              </div>                                                                                                                                                                                          
+          </div>                                                                                                                                                                                              
+                                                                                                                                                                                                              
+          <!-- 3. Стела "Морская слава России" -->                                                                                                                                                            
+          <div class="card">                                                                                                                                                                                  
+              <img src="{% static 'images/3.webp' %}" alt="Морская слава России" class="card-image">                                                                                                          
+              <div class="card-content">                                                                                                                                                                      
+                  <h3 class="card-title">Стела "Морская слава России"</h3>                                                                                                                                    
+                  <p class="card-text">47-метровая стела на входе в порт.</p>                                                                                                                                 
+                  <p class="card-address">Адрес: ул. Адмирала Серебрякова, 1 (Центральный вход в порт)</p>                                                                                                    
+              </div>                                                                                                                                                                                          
+          </div>                                                                                                                                                                                              
+                                                                                                                                                                                                              
+          <!-- 4. Памятник Брежневу -->                                                                                                                                                                       
+          <div class="card">                                                                                                                                                                                  
+              <img src="{% static 'images/4.jpeg' %}" alt="Памятник Брежневу" class="card-image">                                                                                                             
+              <div class="card-content">                                                                                                                                                                      
+                  <h3 class="card-title">Памятник Л.И. Брежневу</h3>                                                                                                                                          
+                  <p class="card-text">Единственный в России памятник генсеку.</p>                                                                                                                            
+                  <p class="card-address">Адрес: ул. Советов, 44 </p>                                                                                                                                         
+              </div>                                                                                                                                                                                          
+          </div>                                                                                                                                                                                              
+                                                                                                                                                                                                              
+          <!-- 5. Памятник "Исход" -->                                                                                                                                                                        
+          <div class="card">                                                                                                                                                                                  
+              <img src="{% static 'images/5.jpeg' %}" alt="Памятник Исход" class="card-image">                                                                                                                
+              <div class="card-content">                                                                                                                                                                      
+                  <h3 class="card-title">Памятник "Исход"</h3>                                                                                                                                                
+                  <p class="card-text">Посвящен эвакуации Белой армии в 1920 году.</p>                                                                                                                        
+                  <p class="card-address">Адрес: Набережная адмирала Серебрякова, 15 (у памятника "Девушка на дельфине")</p>                                                                                  
+              </div>                                                                                                                                                                                          
+          </div>
 
-{%block footer%} 
-<button class="button-museum-home">
-    <a href="{% url 'home' %}" class="link-museum-home">На главную</a>
-</button>
+        <!-- 6. Девушка на дельфине -->                                                                                                                                                                     
+          <div class="card">                                                                                                                                                                                  
+              <img src="{% static 'images/6.jpg' %}" alt="Девушка на дельфине" class="card-image">                                                                                                            
+              <div class="card-content">                                                                                                                                                                      
+                  <h3 class="card-title">"Девушка на дельфине"</h3>                                                                                                                                           
+                  <p class="card-text">Символ морского города.</p>                                                                                                                                            
+                  <p class="card-address">Адрес: Набережная адмирала Серебрякова, 17А (Центральная набережная)</p>                                                                                            
+              </div>                                                                                                                                                                                          
+          </div>                                                                                                                                                                                              
+                                                                                                                                                                                                              
+          <!-- 7. Жена моряка -->                                                                                                                                                                             
+          <div class="card">                                                                                                                                                                                  
+              <img src="{% static 'images/7.webp' %}" alt="Жена моряка" class="card-image">                                                                                                                   
+              <div class="card-content">                                                                                                                                                                      
+                  <h3 class="card-title">Памятник "Жене моряка"</h3>                                                                                                                                          
+                  <p class="card-text">Трогательная скульптура женщины, смотрящей в море.</p>                                                                                                                 
+                  <p class="card-address">Адрес: ул. Набережная, 17 (у здания Морвокзала)</p>                                                                                                                 
+              </div>                                                                                                                                                                                          
+          </div>                                                                                                                                                                                              
+                                                                                                                                                                                                              
+          <!-- 8. Памятник Пушкину -->                                                                                                                                                                        
+          <div class="card">                                                                                                                                                                                  
+              <img src="{% static 'images/8.webp' %}" alt="Памятник Пушкину" class="card-image">                                                                                                              
+              <div class="card-content">                                                                                                                                                                      
+                 <h3 class="card-title">Памятник А.С. Пушкину</h3>                                                                                                                                           
+                 <p class="card-text">Поэт посещал Новороссийск в 1820 году.</p>                                                                                                                             
+                 <p class="card-address">Адрес: ул. Советов, 40 (Пушкинский сквер)</p>                                                                                                                       
+             </div>                                                                                                                                                                                          
+         </div>                                                                                                                                                                                              
+                                                                                                                                                                                                             
+         <!-- 9. Памятник "Морякам революции" -->                                                                                                                                                            
+         <div class="card">                                                                                                                                                                                  
+             <img src="{% static 'images/9.webp' %}" alt="Морякам революции" class="card-image">                                                                                                             
+             <div class="card-content">                                                                                                                                                                      
+                 <h3 class="card-title">Памятник "Морякам революции"</h3>                                                                                                                                    
+                 <p class="card-text">Посвящен морякам, погибшим в 1917-1920 гг.</p>                                                                                                                         
+                 <p class="card-address">Адрес:муниципальное образование Геленджик, М-4 Дон, 1532-й километр </p>                                                                                            
+             </div>                                                                                                                                                                                          
+         </div>
 
-{%endblock%}
+       <!-- 10. Крейсер "Михаил Кутузов" -->                                                                                                                                                               
+         <div class="card">                                                                                                                                                                                  
+             <img src="{% static 'images/10.jpeg' %}" alt="Крейсер Кутузов" class="card-image">                                                                                                              
+             <div class="card-content">                                                                                                                                                                      
+                 <h3 class="card-title">Крейсер "Михаил Кутузов"</h3>                                                                                                                                        
+                 <p class="card-text">Легендарный корабль-музей.</p>                                                                                                                                         
+                 <p class="card-address">Адрес: Набережная адмирала Серебрякова, причал №14</p>                                                                                                              
+             </div>                                                                                                                                                                                          
+         </div>                                                                                                                                                                                              
+                                                                                                                                                                                                             
+        <!-- 11. Памятник "ленин" -->                                                                                                                                                                                <div class="card">                                                                                                                                                                                  
+             <img src="{% static 'images/11.webp' %}" alt="ленин" class="card-image">                                                                                                                        
+             <div class="card-content">                                                                                                                                                                      
+                 <h3 class="card-title">В.И. Ленин                                                                                                                                                           
+                     Памятник, мемориал</h3>                                                                                                                                                                 
+                 <p class="card-text">Памятник В.И.Ленину (1870-1924) установлен на одноимённой площади Новороссийска в 1920г.</p>                                                                           
+                 <p class="card-address">Адрес: Краснодарский край, Новороссийск, Парковая аллея</p>                                                                                                         
+             </div>                                                                                                                                                                                          
+         </div>                                                                                                                                                                                              
+                                                                                                                                                                                                             
+         <!-- 12. Памятник "Памятник самолёту Ил-2" -->                                                                                                                                                      
+         <div class="card">                                                                                                                                                                                  
+             <img src="{% static 'images/12.jpeg' %}" alt="Первым комсомольцам" class="card-image">                                                                                                          
+             <div class="card-content">                                                                                                                                                                      
+                 <h3 class="card-title">Самолёту Ил-2</h3>                                                                                                                                                   
+                <p class="card-text">«Штурмовик ИЛ-2» подняли со дна моря под Новороссийском: это один из самых целых и хорошо сохранившихся мемориалов.</p>                                                
+                 <p class="card-address">Адрес: Проспект Ленина, 91а</p>                                                                                                                                     
+             </div>                                                                                                                                                                                          
+         </div>                                                                                                                                                                                              
+                                                                                                                                                                                                             
+         <!-- 13. Памятник "Основателям Новороссийска" -->                                                                                                                                                   
+         <div class="card">                                                                                                                                                                                  
+             <img src="{% static 'images/13.jpg' %}" alt="Основателям Новороссийска" class="card-image">                                                                                                     
+             <div class="card-content">                                                                                                                                                                      
+                 <h3 class="card-title">Памятник основателям</h3>                                                                                                                                            
+                 <p class="card-text">Памятник был открыт 12 июня 2007 года в День России при большом стечении народа.                                                                                       
+                     В культурной и общественной жизни Новороссийска наконец-то произошло долгожданное событие: установлен                                                                                   
+                    памятник основателям города Новороссийска. На обширный постамент в центре архитектурной композиции взошли                                                                               
+                     основатели Новороссийска:                                                                                                                                                               
+                     Н. Н. Раевский, М. П. Лазарев и Л. К. Серебряков. Они составляют сплоченную патриотическим порывом группу единомышленников и выражают идею утверждения России на Кавказском побережье Че
+                 <p class="card-address">Адрес: Новороссийск, Форумная площадь</p>                                                                                                                           
+             </div>                                                                                                                                                                                          
+         </div>
 
-{% block content%}
+        <!-- 14. Памятник "Торпедный катер" -->                                                                                                                                                             
+         <div class="card">                                                                                                                                                                                  
+             <img src="{% static 'images/14.webp' %}" alt="Торпедный катер" class="card-image">                                                                                                              
+             <div class="card-content">                                                                                                                                                                      
+                 <h3 class="card-title">Торпедный катер ТКА-341</h3>                                                                                                                                                          <p class="card-text">Реальный катер времен ВОВ.</p>                                                                                                                                         
+                 <p class="card-address">Адрес: набережная Адмирала Серебрякова</p>                                                                                                                          
+             </div>                                                                                                                                                                                          
+         </div>                                                                                                                                                                                              
+                                                                                                                                                                                                             
+         <!-- 15. Памятник "матрос с гранатой" -->                                                                                                                                                           
+         <div class="card">                                                                                                                                                                                               <img src="{% static 'images/15.webp' %}" alt="матрос с гранатой" class="card-image">                                                                                                            
+             <div class="card-content">                                                                                                                                                                      
+                 <h3 class="card-title">Памятник матросу с гранатой</h3>                                                                                                                                     
+                 <p class="card-text">Памятник "Матрос с гранатой" был торжественно открыт 16 сентября 1972 года,                                                                                            
+                     к 29-ой годовщине освобождения Новороссийска от немецко-фашистских войск.</p>                                                                                                           
+                 <p class="card-address">Адрес: Проспект Ленина, 9 </p>                                                                                                                                
+             </div>                                                                                                                                                                                          
+         </div>                                                                                                                                                                                              
+                                                                                                                                                                                                             
+         <!-- 16. Памятник "вечный огонь" -->                                                                                                                                                                
+         <div class="card">                                                                                                                                                                                  
+             <img src="{% static 'images/16.webp' %}" alt="Героям-пограничникам" class="card-image">                                                                                                         
+             <div class="card-content">                                                                                                                                                                      
+                 <h3 class="card-title">Площадь героев и вечный огонь</h3>                                                                                                                                   
+                 <p class="card-text">памятник в Новороссийске, посвящённый павшим воинам,                                                                                                                   
+                     защищавшим город в период Великой Отечественной войны, особенно в 1943 году</p>                                                                                                         
+                 <p class="card-address">Адрес: Краснодарский край, Новороссийск, площадь Героев</p>                                                                                                         
+             </div>                                                                                                                                                                                          
+         </div>                                                                                                                                                                                              
+                                                                                                                                                                                                             
+         <!-- 17. Памятник "Мемориал "Рубеж Обороны" " -->                                                                                                                                                   
+         <div class="card">                                                                                                                                                                                  
+             <img src="{% static 'images/17.webp' %}" alt="Растрленянный вагон" class="card-image">                                                                                                          
+             <div class="card-content">                                                                                                                                                                      
+                <h3 class="card-title">Мемориал "Рубеж Обороны" </h3>                                                                                                                                       
+                 <p class="card-text"> Оборона растреляного вагона продолжалась 393 дня - дольше стоял только Ленинград. В августе-сентябре                                                                  
+                      1941 года немцы предприняли генеральный штурм Новороссийска, захватив его южную и центральную части. Но на                                                                             
+                      севере, на первых километрах Сухумийского шоссе,                                                                                                                                       
+                      в районе цементных заводов, они были остановлены. Дальше по черноморскому побережью немцы пройти не смогли. </p>                                                                       
+                 <p class="card-address">Адрес: М-4 Дон,1541-й километр</p>                                                                                                                                  
+             </div>                                                                                                                                                                                          
+         </div> 
 
-<div class="head-monuments">
-    <img src="{% static 'images/more2.jpg'%}" class="pam-start-img">
-    <h1 class="pam-start-text">ГЛАВНЫЕ ПАМЯТНИКИ НОВОРОССИЙСКА:<br>ИСТОРИЯ ОЛИТАЯ В МЕТАЛЛЕ</h1><br>
-</div>
-
-<br><br><br>
-<br><br><br><br><br>
-<div class="body-cart">
-    <div class="cards-container">
-        <!-- 1. Малая земля -->
-        <div class="card">
-            <img src="{% static 'images/1.webp' %}" alt="Малая земля" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Мемориал "Малая земля"</h3>
-                <p class="card-text">Легендарный мемориал в память о героической обороне плацдарма в 1943 году.</p>
-                <p class="card-address">Адрес: г. Новороссийск, Мысхако, ул. Новороссийских Десантников, 17А</p>
-            </div>
-        </div>
-
-        <!-- 2. Неизвестному матросу -->
-        <div class="card">
-            <img src="{% static 'images/2.webp' %}" alt="Неизвестному матросу" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Памятник Неизвестному матросу</h3>
-                <p class="card-text">Символ мужества моряков-черноморцев. Высота — 7 метров.</p>
-                <p class="card-address">Адрес: Набережная адмирала Серебрякова, 2 (у Морвокзала)</p>
-            </div>
-        </div>
-
-        <!-- 3. Стела "Морская слава России" -->
-        <div class="card">
-            <img src="{% static 'images/3.webp' %}" alt="Морская слава России" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Стела "Морская слава России"</h3>
-                <p class="card-text">47-метровая стела на входе в порт.</p>
-                <p class="card-address">Адрес: ул. Свободы, 1 (Центральный вход в порт)</p>
-            </div>
-        </div>
-
-        <!-- 4. Памятник Брежневу -->
-        <div class="card">
-            <img src="{% static 'images/4.jpeg' %}" alt="Памятник Брежневу" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Памятник Л.И. Брежневу</h3>
-                <p class="card-text">Единственный в России памятник генсеку.</p>
-                <p class="card-address">Адрес: ул. Советов, 44 (у Дворца культуры цементников)</p>
-            </div>
-        </div>
-
-        <!-- 5. Памятник "Исход" -->
-        <div class="card">
-            <img src="{% static 'images/5.jpeg' %}" alt="Памятник Исход" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Памятник "Исход"</h3>
-                <p class="card-text">Посвящен эвакуации Белой армии в 1920 году.</p>
-                <p class="card-address">Адрес: Набережная адмирала Серебрякова, 15 (у памятника "Девушка на дельфине")</p>
-            </div>
-        </div>
-
-        <!-- 6. Девушка на дельфине -->
-        <div class="card">
-            <img src="{% static 'images/6.jpg' %}" alt="Девушка на дельфине" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">"Девушка на дельфине"</h3>
-                <p class="card-text">Символ морского города.</p>
-                <p class="card-address">Адрес: Набережная адмирала Серебрякова, 13А (Центральная набережная)</p>
-            </div>
-        </div>
-
-        <!-- 7. Жена моряка -->
-        <div class="card">
-            <img src="{% static 'images/7.webp' %}" alt="Жена моряка" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Памятник "Жене моряка"</h3>
-                <p class="card-text">Трогательная скульптура женщины, смотрящей в море.</p>
-                <p class="card-address">Адрес: ул. Набережная, 17 (у здания Морвокзала)</p>
-            </div>
-        </div>
-
-        <!-- 8. Памятник Пушкину -->
-        <div class="card">
-            <img src="{% static 'images/8.webp' %}" alt="Памятник Пушкину" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Памятник А.С. Пушкину</h3>
-                <p class="card-text">Поэт посещал Новороссийск в 1820 году.</p>
-                <p class="card-address">Адрес: ул. Советов, 40 (Пушкинский сквер)</p>
-            </div>
-        </div>
-
-        <!-- 9. Памятник "Морякам революции" -->
-        <div class="card">
-            <img src="{% static 'images/9.webp' %}" alt="Морякам революции" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Памятник "Морякам революции"</h3>
-                <p class="card-text">Посвящен морякам, погибшим в 1917-1920 гг.</p>
-                <p class="card-address">Адрес: ул. Рубина, 2 (парк им. Ленина)</p>
-            </div>
-        </div>
-
-        <!-- 10. Крейсер "Михаил Кутузов" -->
-        <div class="card">
-            <img src="{% static 'images/10.jpeg' %}" alt="Крейсер Кутузов" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Крейсер "Михаил Кутузов"</h3>
-                <p class="card-text">Легендарный корабль-музей.</p>
-                <p class="card-address">Адрес: Набережная адмирала Серебрякова, причал №14</p>
-            </div>
-        </div>
-
-        <!-- 11. Памятник "ленин" -->
-        <div class="card">
-            <img src="{% static 'images/11.webp' %}" alt="ленин" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">В.И. Ленин
-                    Памятник, мемориал</h3>
-                <p class="card-text">Памятник В.И.Ленину (1870-1924) установлен на одноимённой площади Новороссийска в 1920г.</p>
-                <p class="card-address">Адрес: Краснодарский край, Новороссийск, Парковая аллея</p>
-            </div>
-        </div>
-
-        <!-- 12. Памятник "Памятник самолёту Ил-2" -->
-        <div class="card">
-            <img src="{% static 'images/12.jpeg' %}" alt="Первым комсомольцам" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Самолёту Ил-2</h3>
-                <p class="card-text">«Штурмовик ИЛ-2» подняли со дна моря под Новороссийском: это один из самых целых и хорошо сохранившихся мемориалов.</p>
-                <p class="card-address">Адрес: Проспект Ленина, 91а</p>
-            </div>
-        </div>
-
-        <!-- 13. Памятник "Основателям Новороссийска" -->
-        <div class="card">
-            <img src="{% static 'images/13.jpg' %}" alt="Основателям Новороссийска" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Памятник основателям</h3>
-                <p class="card-text">Памятник был открыт 12 июня 2007 года в День России при большом стечении народа. 
-                    В культурной и общественной жизни Новороссийска наконец-то произошло долгожданное событие: установлен 
-                    памятник основателям города Новороссийска. На обширный постамент в центре архитектурной композиции взошли 
-                    основатели Новороссийска: 
-                    Н. Н. Раевский, М. П. Лазарев и Л. К. Серебряков. Они составляют сплоченную патриотическим порывом группу единомышленников и выражают идею утверждения России на Кавказском побережье Черного моря.</p>
-                <p class="card-address">Адрес: пл. Морской Славы (напротив здания Администрации)</p>
-            </div>
-        </div>
-
-        <!-- 14. Памятник "Торпедный катер" -->
-        <div class="card">
-            <img src="{% static 'images/14.webp' %}" alt="Торпедный катер" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Торпедный катер ТКА-341</h3>
-                <p class="card-text">Реальный катер времен ВОВ.</p>
-                <p class="card-address">Адрес: Анапское шоссе, 4 (парк Победы)</p>
-            </div>
-        </div>
-
-        <!-- 15. Памятник "матрос с гранатой" -->
-        <div class="card">
-            <img src="{% static 'images/15.webp' %}" alt="матрос с гранатой" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Памятник матросу с гранатой</h3>
-                <p class="card-text">Памятник "Матрос с гранатой" был торжественно открыт 16 сентября 1972 года, 
-                    к 29-ой годовщине освобождения Новороссийска от немецко-фашистских войск.</p>
-                <p class="card-address">Адрес: ​Проспект Ленина, 9 </p>
-            </div>
-        </div>
-
-        <!-- 16. Памятник "вечный огонь" -->
-        <div class="card">
-            <img src="{% static 'images/16.webp' %}" alt="Героям-пограничникам" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Площадь героев и вечный огонь</h3>
-                <p class="card-text">памятник в Новороссийске, посвящённый павшим воинам, 
-                    защищавшим город в период Великой Отечественной войны, особенно в 1943 году</p>
-                <p class="card-address">Адрес: Краснодарский край, Новороссийск, площадь Героев</p>
-            </div>
-        </div>
-
-        <!-- 17. Памятник "Мемориал "Рубеж Обороны" " -->
-        <div class="card">
-            <img src="{% static 'images/17.webp' %}" alt="Растрленянный вагон" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Мемориал "Рубеж Обороны" </h3>
-                <p class="card-text"> Оборона растреляного вагона продолжалась 393 дня - дольше стоял только Ленинград. В августе-сентябре
-                     1941 года немцы предприняли генеральный штурм Новороссийска, захватив его южную и центральную части. Но на 
-                     севере, на первых километрах Сухумийского шоссе,
-                     в районе цементных заводов, они были остановлены. Дальше по черноморскому побережью немцы пройти не смогли. </p>
-                <p class="card-address">Адрес: ул. Энгельса, 32 (парк Ликвидаторов)</p>
-            </div>
-        </div>
-
-        <!-- 18. Скульптура "Дельфины на волне" -->
-        <div class="card">
-            <img src="{% static 'images/18.webp' %}" alt="Дельфины на волне" class="card-image">
-            <div class="card-content">
-                <h3 class="card-title">Дельфины на волне</h3>
-                <p class="card-text">её установили настолько близко к воде, насколько это было возможно. Постамент выполнен в виде волны, и на него помещены четыре разноразмерных дельфина. 
-                    Памятник полностью выполнен из бронзы.</p>
-                <p class="card-address">Адрес: набережная Адмирала Серебрякова, 39А</p>
-            </div>
-        </div>
-
-
-    </div>
-</div>
-
-<br><br><br><br><br>
-
-{% endblock %}
+        <!-- 18. Скульптура "Дельфины на волне" -->                                                                                                                                                         
+         <div class="card">                                                                                                                                                                                  
+             <img src="{% static 'images/18.webp' %}" alt="Дельфины на волне" class="card-image">                                                                                                            
+             <div class="card-content">                                                                                                                                                                      
+                 <h3 class="card-title">Дельфины на волне</h3>                                                                                                                                               
+                 <p class="card-text">её установили настолько близко к воде, насколько это было возможно. Постамент выполнен в виде волны, и на него помещены четыре разноразмерных дельфина.                
+                    Памятник полностью выполнен из бронзы.</p>                                                                                                                                              
+                 <p class="card-address">Адрес: набережная Адмирала Серебрякова, 39А</p>                                                                                                                     
+            </div>                                                                                                                                                                                          
+        </div>                                                                                                                                                                                              
+                                                                                                                                                                                                             
+                                                                                                                                                                                                             
+     </div>                                                                                                                                                                                                  
+ </div>                                                                                                                                                                                                      
+                                                                                                                                                                                                             
+ <br><br><br><br><br>                                                                                                                                                                                        
+                                                                                                                                                                                                             {% endblock %}              

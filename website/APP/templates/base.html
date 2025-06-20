@@ -24,8 +24,6 @@
             </div>
 
             <div class="search-string">
-                <input type="text" id="searchInput" placeholder="Введите интересующую локацию". size="50">
-                <button class="search" onclick="searchAndScroll()">Искать</button>
                 {%block footer%}{%endblock%}
             </div>
             <div class="knopka"> 
@@ -52,7 +50,7 @@
         <div class="footer-section">
             <h3><span class="emoji">🔥</span> Хочешь связаться с нами?<br>Вот наши данные!</h3>
             <p>✉️ mlol6519@gmail.com</p>
-            <p>📞 +7-967-310-22-5</p>
+            <p>📞 +7-967-310-22-55</p>
             <div class="social-links">
                 <a href="https://m.vk.com/id459053622"><i>VK</i></a>
                 <a href="https://t.me/mmarkc1"><i>TG</i></a>
@@ -97,31 +95,4 @@
         });
 
 
-
-
-    function searchAndScroll() {
-        const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
-        if (!searchTerm) return;
-
-        // Изменён селектор - ищем по классу text, где содержится основной контент
-        const contentElements = document.querySelectorAll('.text');
-        let found = false;
-
-        contentElements.forEach(element => {
-            const text = element.innerText.toLowerCase();
-            if (text.includes(searchTerm)) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                found = true;
-                // Подсветка найденного текста
-                element.style.backgroundColor = '#ffff99';
-                setTimeout(() => {
-                    element.style.backgroundColor = '';
-                }, 3000);
-            }
-        });
-
-        if (!found) {
-            alert('Совпадений не найдено. Попробуйте другие ключевые слова.');
-        }
-    }
 </script>

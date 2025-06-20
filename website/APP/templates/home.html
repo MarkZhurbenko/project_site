@@ -27,11 +27,6 @@
                 </div>
             </div>
 
-            <div class="search-string">
-                <input type="text" id="searchInput" placeholder="Введите интересующую локацию". size="50">
-                <button class="search" onclick="searchAndScroll()">Искать</button>
-            </div>
-
     <div class="knopka"> 
         <button class="button" onclick="toggleMenu()">Меню</button>
         <div class="menu" id="menu">
@@ -165,25 +160,5 @@
             }
         });
 
-        function searchAndScroll() {
-            const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
-            if (!searchTerm) return; // Если поле пустое, ничего не делаем
-
-            const paragraphs = document.querySelectorAll('#content p'); // Получаем все абзацы
-            let found = false; // Флаг для проверки, найдено ли слово
-
-            paragraphs.forEach(paragraph => {
-                const text = paragraph.innerText.toLowerCase();
-                if (text.includes(searchTerm)) {
-                    paragraph.scrollIntoView({ behavior: 'smooth', block: 'center' }); // Прокручиваем к абзацу
-                    found = true;
-                    return; // Прерываем цикл после первого найденного совпадения
-                }
-            });
-
-            if (!found) {
-                alert('Слово не найдено!'); // Если слово не найдено, показываем сообщение
-            }
-        }
 
 </script>
