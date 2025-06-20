@@ -1,16 +1,16 @@
 {% extends 'base.html'%}                                                                                                                                                                                    
- {% load static %}                                                                                                                                                                                           
+{% load static %}                                                                                                                                                                                           
                                                                                                                                                                                                              
- {%block css%}                                                                                                                                                                                               
+{%block css%}                                                                                                                                                                                               
 <link rel="stylesheet" href= "{% static 'css/big-monuments.css' %}">                                                                                                                                        
 <link rel="stylesheet" href= "{% static 'css/small-monuments.css' %}">                                                                                                                                      
- {%endblock%}                                                                                                                                                                                                
- {%block footer%}                                                                                                                                                                                            
- <button class="button-museum-home">                                                                                                                                                                         
+{%endblock%}                                                                                                                                                                                                
+{%block footer%}                                                                                                                                                                                            
+<button class="button-museum-home">                                                                                                                                                                         
       <a href="{% url 'home' %}" class="link-museum-home">На главную</a>                                                                                                                                      
-  </button>                                                                                                                                                                                                   
+</button>                                                                                                                                                                                                   
                                                                                                                                                                                                               
-  {%endblock%}                                                                                                                                                                                                
+{%endblock%}                                                                                                                                                                                                
                                                                                                                                                                                                               
   {% block content%}                                                                                                                                                                                          
                                                                                                                                                                                                               

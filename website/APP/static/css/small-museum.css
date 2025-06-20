@@ -1,4 +1,12 @@
 @media screen and (max-width: 750px){
+    .button-museum-home{
+        background-color: #007BFF;
+        border-radius: 3px;
+        border: none;
+        margin-left: -12vw;
+        margin-top: 12vw;
+        margin-bottom: 8px;
+}
     .gallary-planet{
         margin-left: 4.5vw;
     }
@@ -36,12 +44,6 @@
         height: 70%;
         margin-left: 5px;
     }
-.button-museum-home{
-    background-color: #007BFF;
-    border-radius: 3px;
-    border: none;
-    margin-left: 5px;
-}
 
 .start-header1{
     background-color: #014877;
@@ -54,6 +56,7 @@
     height: 50vw;
     margin-left: 40px;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .head-text-museum{

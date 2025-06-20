@@ -3,8 +3,10 @@
         background-color: #007BFF;
         border-radius: 3px;
         border: none;
-        margin-left: 5px;
-    }
+        margin-left: -12vw;
+        margin-top: 12vw;
+        margin-bottom: 8px;
+}
 
     .head-monuments{
         padding-top: 36px;
