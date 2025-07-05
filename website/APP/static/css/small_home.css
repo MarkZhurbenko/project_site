@@ -209,14 +209,14 @@
     
     .start-header{
         background-color: #014877;
-        margin-top: 70px;
+        margin-top: 50px;
         position: relative;
     }
     .start-text-novoross{
         color: white;
         width: 50%;
         padding-left: 20px;
-        padding-top: 30px;
+        padding-top: 15px;
         font-size: 140%;
         position: absolute;
     }
