@@ -1,0 +1,45 @@
+{% extends 'base.html'%}                                                                                                                                                                                    
+{% load static %}                                                                                                                                                                                           
+                                                                                                                                                                                                             
+{%block css%}                                                                                                                                                                                               
+<link rel="stylesheet" href= "{% static 'css/big_home.css' %}">
+<link rel="stylesheet" href= "{% static 'css/small_home.css' %}">
+<link rel="stylesheet" href= "{% static 'css/big-rest.css' %}">
+<link rel="stylesheet" href= "{% static 'css/small-rest.css' %}">                                                                                                                                            
+{%endblock%}                                                                                                                                                                                                
+{%block footer%}                                                                                                                                                                                            
+<button class="button-museum-home">                                                                                                                                                                         
+      <a href="{% url 'home' %}" class="link-museum-home">На главную</a>                                                                                                                                      
+</button>                                                                                                                                                                                                                                                                                                                                                                                    
+{%endblock%}                                                                                                                                                                                                
+         
+
+{% block content%}                                                                                                                                                                                          
+<div class="hero">
+    <img src="{%static 'images/fin-rest.jpg'%}" alt="Ресторан города">
+    <div class="overlay"></div>
+    <div class="hero-text">Ретораны города</div>
+</div>
+<div class="museum">
+        <h1 class="text-museum">Сарик Хинкалыч</h1>
+        <p class="text-mus-start">Ресторан «Старик Хинкалыч» — популярная сеть грузинских кафе в России (Москва, Санкт-Петербург, Севастополь, Ялта и др.),
+            предлагающая аутентичные блюда кавказской кухни по демократичным ценам.<br><br>
+            Меню: Основные блюда — хинкали с различными начинками, хачапури, шашлыки и другие традиционные блюда. 
+            Напитки включают мацони, айран и лимонады.<br><br>
+            Интерьер и атмосфера: Рестораны оформлены в традиционном грузинском стиле с уютной атмосферой и национальной музыкой.<br><br>
+            Цены и сервис: Средний чек около 800–1000 рублей. Посетители отмечают быстрое обслуживание и дружелюбный персонал.
+</p><br>
+            <button class="button-museum">
+                <a href="https://starikkhinkalich.ru/" class="link-museum">Узнать больше о ресторане</a>
+            </button>
+    </div>
+    <div class="gallary-monuments">
+        <div>
+            <img src="{%static 'images/h1.webp'%}" class="photo-mon">
+        </div>        
+        <div class="photo-mon">
+            <img src="{%static 'images/h2.jpg'%}" class="photo-mon">
+        </div>
+    </div>
+
+{% endblock %}              

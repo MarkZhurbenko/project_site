@@ -1,6 +1,77 @@
 
 @media screen and (max-width:2100px) and (min-width: 751px){
 
+    .rek{
+        display: flex;
+    }
+    /* Контейнер карточки */
+  .ad-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #ffffff; /* можно убрать или изменить под свой сайт */
+    padding-right: 70px;
+    padding-bottom: 20px;
+  }
+
+  /* Сама карточка */
+  .ad-card {
+    width: 280px;
+    border: 2px solid #ffffff; /* серый цвет рамки */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background-color: #fff;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  }
+
+  /* Hover эффект */
+  .ad-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    border-color: #555555;
+  }
+
+  /* Изображение */
+  .ad-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  /* Контент карточки */
+  .ad-content {
+    padding: 12px;
+  }
+  .ad-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0 0 6px 0;
+    padding-left: 10px;
+    text-align: center;
+  }
+  .ad-text {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.3;
+  }
+
+  /* Метка "Реклама" */
+  .ad-label {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #888888;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
     .only-flex{
         display: flex;
     }
@@ -107,6 +178,7 @@
     .text-mus-start{
         font-size: 1.6vw;
         margin-right: 90px;
+        margin-bottom: 90px;
     }
     .search-string{
         padding-top: 30px;

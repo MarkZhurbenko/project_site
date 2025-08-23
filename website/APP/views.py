@@ -14,6 +14,6 @@ def museum(requests):
 def monuments(requests):
     return render(requests, 'monuments.html')
 
-def interesting_location(requests):
-    return render(requests, 'interesting_location.html')
+def restaurant(requests):
+    return render(requests, 'restaurant.html')
 

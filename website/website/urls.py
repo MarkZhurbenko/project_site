@@ -24,6 +24,6 @@ urlpatterns = [
     path('test/', test, name='test'), #http://127.0.0.1:8000/test/
     path('museum/', museum, name='museum'), #http://127.0.0.1:8000/home/museum/
     path('monuments/', monuments, name='monuments'), #http://127.0.0.1:8000/home/monuments/
-    path('interesting_location', interesting_location, name='interesting_location'), #http://127.0.0.1:8000/home/interesting_location
+    path('restaurant', restaurant, name='restaurant'), #http://127.0.0.1:8000/home/restaurant
     
 ]
