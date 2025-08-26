@@ -12,7 +12,6 @@
     padding: 10px 0;
     background-color: #ffffff; /* можно убрать или изменить под свой сайт */
     padding-right: 70px;
-    padding-bottom: 20px;
   }
 
   /* Сама карточка */
@@ -99,9 +98,9 @@
             padding-bottom: 4px;
         }
     .menu-link{
-        width: 160%;
-        margin-left: -60px;
-        font-size: 2vw;
+        width: 100%;
+        margin-left: -2vw;
+        font-size: 1.7vw;
         border: none;
         background-color: #007BFF;
         color: #ffffff;
@@ -178,7 +177,6 @@
     .text-mus-start{
         font-size: 1.6vw;
         margin-right: 90px;
-        margin-bottom: 90px;
     }
     .search-string{
         padding-top: 30px;
@@ -216,9 +214,9 @@
         }
     .menu {
                 position: fixed;
-                right: -350px; /* Скрываем меню за пределами экрана */
+                right: -30vw; /* Скрываем меню за пределами экрана */
                 top: 0;
-                width: 290px;
+                width:19vw;
                 height: 100%;
                 color: white;
                 transition: right 0.5s ease; /* Анимация для выезда меню */

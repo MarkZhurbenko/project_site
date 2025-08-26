@@ -86,9 +86,9 @@
         
     }
     .menu-link{
-        width: 260%;
-        margin-left: -60px;
-        font-size: 5.5vw;
+        width: 160%;
+        margin-left: -14vw;
+        font-size: 4.5vw;
         border: none;
         background-color: #007BFF;
         color: #ffffff;
@@ -217,9 +217,9 @@
         }
     .menu {
                 position: fixed;
-                right: -350px; /* Скрываем меню за пределами экрана */
+                right: -54vw; /* Скрываем меню за пределами экрана */
                 top: 0;
-                width: 110px;
+                width: 43vw;
                 height: 100%;
                 color: white;
                 transition: right 0.5s ease; /* Анимация для выезда меню */

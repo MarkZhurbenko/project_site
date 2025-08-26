@@ -1,4 +1,19 @@
 @media screen and (max-width: 750px){
+
+  .photo-rest2{
+  flex: 0 0 auto; /* Запрет на сжатие и растяжение */
+        width: 36vw; /* Фиксированная ширина фотографии */
+        height: 50vw; /* Фиксированная высота фотографии */
+        border-radius: 5px;
+
+}
+.photo-rest1{
+  width: 53vw;
+  height: 11,4vw;
+  padding-left: 1vw;
+  padding-top: 20px;
+  border-radius: 5px;
+}
     .button-museum-home{
         background-color: #007BFF;
         border-radius: 3px;
