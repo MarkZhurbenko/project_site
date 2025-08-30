@@ -1,6 +1,46 @@
 
 @media screen and (max-width:2100px) and (min-width: 751px){
-    
+
+.menu-link-head1{
+    position: absolute;
+    left: 53%;
+    top: 10%;
+    font-size: 1rem;
+}
+.menu-link-head2{
+    position: absolute;
+    left: 79%;
+    top: 10%;
+    font-size: 1rem;
+}
+.menu-link-head3{
+    position: absolute;
+    left: 110%;
+    top: 10%;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+.images-logo-novoross{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: -9%;
+}
+.provodnik{
+    position: absolute;
+    font-size: 0.7rem;
+    transform: translate(-50%, -50%);
+    color: #ddd;
+    top: 7%;
+    left: 29%;
+    right: 30%;
+    font-weight: bold;
+
+    }
+
 .novo-start-text{
       position: absolute;
       top: 63%;
@@ -27,11 +67,6 @@
   z-index: 1; 
 }
 
-    #target {
-      padding: 20px;
-      background: lightblue;
-      border-radius: 8px;
-    }
     body, html {
       margin: 0;
       padding: 0;
@@ -42,7 +77,7 @@
       height: 100vh;
       overflow: hidden;
     }
-    .hero img {
+    .images-fon {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -176,6 +211,8 @@
     }
     .vozm-stor{
         padding-bottom: 40px;
+        white-space: nowrap;
+        font-size: 1.6vw;
     }
     
     a{
@@ -279,7 +316,7 @@
                 overflow-x: hidden; /* Запретить горизонтальную прокрутку */
         }
     .menu {
-                position: fixed;
+        position: absolute;
                 right: -30vw; /* Скрываем меню за пределами экрана */
                 top: 0;
                 width:19vw;
@@ -288,7 +325,7 @@
                 transition: right 0.5s ease; /* Анимация для выезда меню */
                 padding: 20px;
                 background-color: #007BFF;
-                z-index: 4;
+                z-index: 7;
         }
     .menu.active {
                 right: 0; /* Показываем меню */
@@ -296,7 +333,7 @@
                 padding-right: 50px;
             }
     .button {
-                position: absolute;
+                position: fixed;
                 top:25px;
                 right: 20px;
                 padding: 7px 20px;
@@ -308,6 +345,7 @@
                 cursor: pointer;
                 margin-right: 50px;
                 margin-top: 10px;
+                z-index: 6;
             }
     .button:hover{
                 background-color:#014877;
@@ -392,23 +430,16 @@
     .flex{
     display: flex;
     justify-content: space-between;
+    
     }
     .icona{
-    width: 60px;
-    height: 60px;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width: 6px;
+    height: 6px;
     border-radius: 16px;
-    float: left;
+    transform: translate(-50%, -50%);
+
     }
-    .provodnik{
-    margin-top: 38px;
-    line-height: 1px;
-    font-size: 16px;
-    margin-left: 85px;
-    color: #ddd;
-    }
+    
     .number_tel{
     margin-right: 150px;
     margin-top: 50px;

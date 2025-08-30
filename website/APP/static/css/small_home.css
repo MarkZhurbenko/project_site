@@ -1,6 +1,50 @@
 
 @media screen and (max-width: 750px){
-      
+.text-home-logo{
+    display: none;
+}
+.menu-link-head1{
+    position: absolute;
+    left: 53%;
+    top: 25%;
+    font-size: 1rem;
+    display: none;
+}
+.menu-link-head2{
+    position: absolute;
+    left: 79%;
+    top: 25%;
+    font-size: 1rem;
+    display: none;
+}
+.menu-link-head3{
+    position: absolute;
+    left: 110%;
+    top: 25%;
+    font-size: 1rem;
+    white-space: nowrap;
+    display: none;
+}
+.images-logo-novoross{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 1%;
+    left: 1%;
+}
+.provodnik{
+    position: absolute;
+    font-size: 0.7rem;
+    transform: translate(-50%, -50%);
+    color: #ddd;
+    top: 1%;
+    left: 17%;
+    right: 30%;
+    font-weight: bold;
+
+    }      
 .novo-start-text{
       position: absolute;
       top: 50%;
@@ -28,11 +72,6 @@
 
 }
 
-    #target {
-      padding: 20px;
-      background: lightblue;
-      border-radius: 8px;
-    }
     body, html {
       margin: 0;
       padding: 0;
@@ -44,7 +83,7 @@
       overflow: hidden;
 
     }
-    .hero img {
+    .images-fon{
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -162,8 +201,8 @@
         
     }
     .menu-link{
-        width: 160%;
-        margin-left: -14vw;
+        width: 100%;
+        margin-left: 1vw;
         font-size: 4.5vw;
         border: none;
         background-color: #007BFF;
@@ -295,13 +334,13 @@
                 position: fixed;
                 right: -54vw; /* Скрываем меню за пределами экрана */
                 top: 0;
-                width: 43vw;
+                width: 40vw;
                 height: 100%;
                 color: white;
                 transition: right 0.5s ease; /* Анимация для выезда меню */
                 padding: 20px;
                 background-color: #007BFF;
-                z-index: 4;
+                z-index: 7;
         }
     .menu.active {
                 right: 0; /* Показываем меню */
@@ -309,7 +348,7 @@
                 padding-right: 70px;
             }
     .button {
-                position: absolute;
+                position: fixed;
                 top: 20px;
                 right: 20px;
                 padding: 10px 20px;
@@ -320,12 +359,14 @@
                 font-size: 15px;
                 cursor: pointer;
                 margin-right: 40px;
+                z-index: 6;
             }
     .button:hover{
                 background-color:#014877;
             }
     .vozm-stor{
-        font-size: 12px;
+        font-size: 3.5vw;
+        white-space: nowrap;
     }
     
     .map{
