@@ -1,5 +1,8 @@
 @media screen and (max-width: 750px){
 
+.menu-link-head4{
+    display: none;
+}
   .photo-rest2{
   flex: 0 0 auto; /* Запрет на сжатие и растяжение */
         width: 36vw; /* Фиксированная ширина фотографии */
@@ -14,22 +17,14 @@
   padding-top: 20px;
   border-radius: 5px;
 }
-    .button-museum-home{
-        background-color: #007BFF;
-        border-radius: 3px;
-        border: none;
-        margin-left: -12vw;
-        margin-top: 12vw;
-        margin-bottom: 8px;
 
-}
 .hero {
         position: relative;
         height: 100vh;
         overflow: hidden;
         
       }
-      .hero img {
+      .images-fon {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -49,7 +44,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         color: white;
-        font-size: 2.5rem;
+        font-size: 1.9rem;
         font-weight: bold;
         text-align: center;
         padding: 0 10px;

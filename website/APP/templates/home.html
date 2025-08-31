@@ -188,6 +188,12 @@
                 menu.classList.remove('active'); // Скрываем меню
             }
         });
+    function scrollToTarget() {
+      document.getElementById("target").scrollIntoView({
+        behavior: "smooth", // плавная прокрутка
+        block: "start"      // позиционирование по верхней границе
+      });
+    }
 
 
 </script>
