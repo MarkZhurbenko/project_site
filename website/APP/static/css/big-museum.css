@@ -1,4 +1,51 @@
 @media screen and (max-width:2100px) and (min-width: 751px){
+.menu-link-head4{
+    position: absolute;
+    left: 159%;
+    top: 10%;
+    font-size: 1rem;
+}
+
+.hero52 {
+  height: 90vh;
+  background: url("https://cdn.culture.ru/images/a200065e-34cc-5016-8514-0048237bd771") center/cover no-repeat;
+  background-attachment: fixed; /* 🔑 эффект Варламова */
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+}
+
+.start-museum-text-head{
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+  z-index: 1;
+}
+
+.second-text-head-museum{
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: white;
+  z-index: 1;
+    margin-left: 90px;
+  margin-right: 90px;
+}
+
+/* лёгкая затемняющая подложка */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 90%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
 
 .gallary-planet{
     display: flex;

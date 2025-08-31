@@ -15,53 +15,66 @@
     
     
 </head>
-<header>{% block header %}
-    <div class="flex">
-        <div class="mini">
-            <div class="all">
-                <p><img src="{%static 'images/logo2.jpg'%}" class="icona">
-                <div class = "provodnik">
-                    <p>Проводник</p>
-                    <p>по достопримечательностям</p>
-                    <p>г. Новороссийск</p></p>
-                </div>
-            </div>
 
-    <div class="knopka"> 
-        <button class="button" onclick="toggleMenu()">Меню</button>
-        <div class="menu" id="menu">
-            <h2 class="vozm-stor">Возможные направления:</h2>
-            <ul>
-                <a href="{% url 'museum' %}">
-                    <button class="menu-link">Музеи</button>
-                </a><br><br>
-                <a href="{% url 'monuments' %}">
-                    <button class="menu-link">Памятники</button>
-                </a><br><br>
-                <a href="{% url 'restaurant' %}">
-                    <button class="menu-link">Кафе и рестораны</button>
-                </a><br><br>
-                </a><br><br>
-            </ul>
-        </div>
-    </div>    
-
-    </div>
-</header><br>{%endblock%}
 
 <body class="main" id="content">
-    
+{% block header %}
+    <div class="hero">
+        <img src="{%static 'images/start-img1.jpg'%}" alt="home" class="images-fon">
+        <div class="overlay"></div>
 
-    <div class="start-header">
-        <h2 class="start-text-novoross">ПУТЕВОДИТЕЛЬ ПО<br> НОВОРОССИЙСКУ: ГДЕ ПРОВЕСТИ ВРЕМЯ  И ЧТО ПОСЕТИТЬ</h2>
-        <img src="{% static 'images/start-img.jpeg' %}" class="start-back-img">
-    </div>
-    <div class="text-map">
-        <p class="start-text">Добро пожаловать в Новороссийск — город, богатый историей и культурой! Здесь расположено более 100 памятников, каждый из которых рассказывает уникальную историю. 
-            Новороссийск славится своими военно-морскими традициями, живописными пейзажами и значимыми историческими событиями. Откройте для себя наследие этого удивительного города!</p>
-            <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ade2f33dd9b6f1df8a8c91e86a826bf746ed8db96ee019c8e151a8e225d1c2b8b&amp;source=constructor"></iframe>
-    </div>
+        <div class="flex">
+          
+            <div class = "provodnik">
+              <img src='{%static "images/logo2.jpg"%}' class="images-logo-novoross">
+                    <p class="text-home-logo">Проводник<br>
+                    по достопримечательностям<br>
+                    г. Новороссийск</p>
+                    <ul>
+                      <a href="{% url 'museum' %}">
+                            <p class="menu-link-head1">Музеи</p>
+                        </a>
+                        <a href="{% url 'monuments' %}">
+                            <p class="menu-link-head2">Памятники</p>
+                        </a>
+                        <a href="{% url 'restaurant' %}">
+                            <p class="menu-link-head3">Кафе и рестораны</p>
+                        </a>
 
+                        
+                    </ul>
+                </div>
+
+            <div class="knopka"> 
+                <button class="button" onclick="toggleMenu()">Меню</button>
+                <div class="menu" id="menu">
+                    <h2 class="vozm-stor">Возможные направления:</h2>
+                    <ul>
+                        <a href="{% url 'museum' %}">
+                            <button class="menu-link">Музеи</button>
+                        </a><br><br>
+                        <a href="{% url 'monuments' %}">
+                            <button class="menu-link">Памятники</button>
+                        </a><br><br>
+                        <a href="{% url 'restaurant' %}">
+                            <button class="menu-link">Кафе и рестораны</button>
+                        </a><br><br>
+                        <br><br>
+                    </ul>
+                </div>
+            </div>  
+    </div>
+      <div class="hero-text">
+        ПУТЕВОДИТЕЛЬ ПО<br> НОВОРОССИЙСКУ: ГДЕ ПРОВЕСТИ ВРЕМЯ  И ЧТО ПОСЕТИТЬ
+      </div>
+      <p class="novo-start-text">Открой для себя Новороссийск!
+      Музеи, памятники, набережные и уютные места для отдыха — всё самое интересное собрано здесь в одном путеводителе.</p>
+      <div class="button-start-trvl">
+        <button class="scroll-button" onclick="scrollToTarget()">Начать путешествие </button>
+      </div>
+    </div>
+    <div id="target"></div>
+{%endblock%}
     <div class="museum">
         <h1 class="text-museum">Музеи</h1>
         <div class="rek">

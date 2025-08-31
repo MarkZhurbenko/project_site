@@ -3,7 +3,9 @@
                                                                                                                                                                                                              
 {%block css%}                                                                                                                                                                                               
 <link rel="stylesheet" href= "{% static 'css/big-monuments.css' %}">                                                                                                                                        
-<link rel="stylesheet" href= "{% static 'css/small-monuments.css' %}">                                                                                                                                      
+<link rel="stylesheet" href= "{% static 'css/small-monuments.css' %}"> 
+<link rel="stylesheet" href= "{% static 'css/big_home.css' %}">
+<link rel="stylesheet" href= "{% static 'css/small_home.css' %}">                                                                                                                                     
 {%endblock%}                                                                                                                                                                                                
 {%block footer%}                                                                                                                                                                                            
 <button class="button-museum-home">                                                                                                                                                                         
@@ -14,13 +16,44 @@
                                                                                                                                                                                                               
   {% block content%}                                                                                                                                                                                          
                                                                                                                                                                                                               
-  <div class="head-monuments">                                                                                                                                                                                
-      <img src="{% static 'images/52.webp'%}" class="pam-start-img">                                                                                                                                        
-      <h1 class="pam-start-text">ГЛАВНЫЕ ПАМЯТНИКИ НОВОРОССИЙСКА:<br>ИСТОРИЯ,ОТЛИТАЯ В МЕТАЛЛЕ</h1><br>                                                                                                       
-  </div>                                                                                                                                                                                                      
-                                                                                                                                                                                                              
-  <br><br><br>                                                                                                                                                                                                
-  <br><br>                                                                                                                                                                                                    
+    <div class="hero">
+        <img src="{%static 'images/more2.JPG'%}" alt="home" class="images-fon">
+        <div class="overlay"></div>
+
+        <div class="flex">
+          
+            <div class = "provodnik">
+              <img src='{%static "images/logo2.jpg"%}' class="images-logo-novoross">
+                    <p class="text-home-logo">Проводник<br>
+                    по достопримечательностям<br>
+                    г. Новороссийск</p>
+                    <ul>
+                    <a href="{% url 'home' %}">
+                            <p class="menu-link-head4">Главная</p>
+                    </a>
+                      <a href="{% url 'museum' %}">
+                            <p class="menu-link-head1">Музеи</p>
+                        </a>
+                        <a href="{% url 'monuments' %}">
+                            <p class="menu-link-head2">Памятники</p>
+                        </a>
+                        <a href="{% url 'restaurant' %}">
+                            <p class="menu-link-head3">Кафе и рестораны</p>
+                        </a>
+
+                        
+                    </ul>
+                </div>
+
+    </div>
+      <div class="hero-text1">
+       ГЛАВНЫЕ ПАМЯТНИКИ НОВОРОССИЙСКА
+      </div>
+      <p class="novo-start-text1">Каждый памятник в Новороссийске рассказывает свою 
+        уникальную историю, приглашая окунуться в прошлое и почувствовать дух города.</p>
+
+    </div>                                                                                                                                                                                               
+                                                                                                                                                                                                 
   <div class="body-cart">                                                                                                                                                                                     
       <div class="cards-container">                                                                                                                                                                           
           <!-- 1. Малая земля -->                                                                                                                                                                             

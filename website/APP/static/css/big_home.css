@@ -1,6 +1,13 @@
 
 @media screen and (max-width:2100px) and (min-width: 751px){
-
+.images-logo-novoross1{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 10px;
+    top: 50%;
+    left: -9%;
+    position: fixed;
+}
 .menu-link-head1{
     position: absolute;
     left: 53%;
@@ -20,6 +27,7 @@
     font-size: 1rem;
     white-space: nowrap;
 }
+
 .images-logo-novoross{
     width: 3.5rem;
     height: 3.5rem;
@@ -316,7 +324,7 @@
                 overflow-x: hidden; /* Запретить горизонтальную прокрутку */
         }
     .menu {
-        position: absolute;
+        position: fixed;
                 right: -30vw; /* Скрываем меню за пределами экрана */
                 top: 0;
                 width:19vw;

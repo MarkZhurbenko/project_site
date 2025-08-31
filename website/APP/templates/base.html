@@ -7,30 +7,21 @@
     <link rel="stylesheet" href= "{% static 'css/big_home.css' %}">
     <link rel="stylesheet" href= "{% static 'css/small_home.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
     {%block css%}{%endblock%}
 </head>
-<header>{% block header %}
-    <div class="flex">
-        <div class="mini">
-            <div class="all">
-                <p><img src="{%static 'images/logo2.jpg'%}" class="icona">
-                <div class = "provodnik">
-                    <p>Проводник</p>
-                    <p>по достопримечательностям</p>
-                    <p>г. Новороссийск</p></p>
-                </div>
-            </div>
 
-            <div class="search-string">
-                {%block footer%}{%endblock%}
-            </div>
-            <div class="knopka"> 
+
+<header class="header">
+<div class="knopka"> 
                 <button class="button" onclick="toggleMenu()">Меню</button>
                 <div class="menu" id="menu">
                     <h2 class="vozm-stor">Возможные направления:</h2>
                     <ul>
+                        <a href="{% url 'home' %}">
+                            <button class="menu-link">Главная</button>
+                        </a><br><br>
                         <a href="{% url 'museum' %}">
                             <button class="menu-link">Музеи</button>
                         </a><br><br>
@@ -44,10 +35,13 @@
                     </ul>
                 </div>
             </div>  
-    </div>
-</header><br><br><br>{%endblock%}
+   
+</header>
 
-{%block content%}{%endblock%}
+
+{%block content%}
+
+{%endblock%}
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-section">
