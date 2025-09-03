@@ -385,7 +385,7 @@
     .button {
                 position: fixed;
                 top: 20px;
-                right: 20px;
+                right: 30%;
                 padding: 10px 20px;
                 background-color: #007BFF;
                 color: white;

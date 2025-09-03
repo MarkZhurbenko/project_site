@@ -19,11 +19,30 @@
 
 <body class="main" id="content">
 {% block header %}
+            <div class="knopka"> 
+                <button class="button" onclick="toggleMenu()">Меню</button>
+                <div class="menu" id="menu">
+                    <h2 class="vozm-stor">Возможные направления:</h2>
+                    <ul>
+                        <a href="{% url 'museum' %}">
+                            <button class="menu-link">Музеи</button>
+                        </a><br><br>
+                        <a href="{% url 'monuments' %}">
+                            <button class="menu-link">Памятники</button>
+                        </a><br><br>
+                        <a href="{% url 'restaurant' %}">
+                            <button class="menu-link">Кафе и рестораны</button>
+                        </a><br><br>
+                        <br><br>
+                    </ul>
+                </div>
+            </div>  
     <div class="hero">
         <img src="{%static 'images/start-img1.jpg'%}" alt="home" class="images-fon">
         <div class="overlay"></div>
 
-        <div class="flex">
+    <div class="hero-content">
+                <div class="flex">
           
             <div class = "provodnik">
               <img src='{%static "images/logo2.jpg"%}' class="images-logo-novoross">
@@ -45,24 +64,7 @@
                     </ul>
                 </div>
 
-            <div class="knopka"> 
-                <button class="button" onclick="toggleMenu()">Меню</button>
-                <div class="menu" id="menu">
-                    <h2 class="vozm-stor">Возможные направления:</h2>
-                    <ul>
-                        <a href="{% url 'museum' %}">
-                            <button class="menu-link">Музеи</button>
-                        </a><br><br>
-                        <a href="{% url 'monuments' %}">
-                            <button class="menu-link">Памятники</button>
-                        </a><br><br>
-                        <a href="{% url 'restaurant' %}">
-                            <button class="menu-link">Кафе и рестораны</button>
-                        </a><br><br>
-                        <br><br>
-                    </ul>
-                </div>
-            </div>  
+
     </div>
       <div class="hero-text">
         ПУТЕВОДИТЕЛЬ ПО<br> НОВОРОССИЙСКУ: ГДЕ ПРОВЕСТИ ВРЕМЯ  И ЧТО ПОСЕТИТЬ
@@ -72,6 +74,7 @@
       <div class="button-start-trvl">
         <button class="scroll-button" onclick="scrollToTarget()">Начать путешествие </button>
       </div>
+    </div>
     </div>
     <div id="target"></div>
 {%endblock%}
