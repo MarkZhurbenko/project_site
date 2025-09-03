@@ -1,5 +1,59 @@
 
 @media screen and (max-width:2100px) and (min-width: 751px){
+.content-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 50px;
+}
+
+.text-section {
+  flex: 1;
+  max-width: 50%; /* текст занимает левую половину */
+}
+
+.text-paragraph {
+  font-size: 1.4vw;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.photo-section {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.photo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.photo-small {
+  width: 200px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* контейнер для большой фотки */
+.photo-large-container {
+  display: flex;
+  align-items: center;
+}
+
+.photo-large {
+  height: calc(100% + 8px); /* на 4px выше и ниже, чем суммарная высота двух маленьких */
+  width: auto;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+}
+
+
 .images-logo-novoross1{
     width: 3.5rem;
     height: 3.5rem;
@@ -120,7 +174,8 @@
     align-items: center;
     padding: 10px 0;
     background-color: #ffffff; /* можно убрать или изменить под свой сайт */
-    padding-right: 70px;
+    margin-left: 12vw;
+    margin-bottom: 30px;
   }
 
   /* Сама карточка */
@@ -286,7 +341,7 @@
         font-size: 5vw;
     }
     .text-mus-start{
-        font-size: 1.6vw;
+        font-size: 1.4vw;
         margin-right: 90px;
     }
     .search-string{
@@ -333,7 +388,8 @@
                 transition: right 0.5s ease; /* Анимация для выезда меню */
                 padding: 20px;
                 background-color: #007BFF;
-                z-index: 7;
+                z-index: 999;
+                
         }
     .menu.active {
                 right: 0; /* Показываем меню */
@@ -353,7 +409,7 @@
                 cursor: pointer;
                 margin-right: 50px;
                 margin-top: 10px;
-                z-index: 6;
+                z-index: 666;
             }
     .button:hover{
                 background-color:#014877;
@@ -373,7 +429,7 @@
         width: 40%;
         margin-top: 100px;
         padding-left: 25px;
-        font-size: 1.6vw;
+        font-size: 1.4vw;
         text-align: center;
     }
     .text-map{
