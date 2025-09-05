@@ -1,5 +1,75 @@
 
 @media screen and (max-width:2100px) and (min-width: 751px){
+/* Контейнер */
+.ad-container-g {
+  width: 95%;
+  margin: 20px 0;
+}
+
+/* Карточка */
+.ad-card-g {
+    margin-left: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  height: 10rem;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background-color: #fff;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+/* Hover эффект */
+.ad-card-g:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  border-color: #555555;
+}
+
+/* Правая часть — картинка */
+.ad-card-g img {
+  height: 8rem;
+  margin-left: 3rem;
+  margin-top: 1.5rem;
+  object-fit: cover;
+}
+
+/* Левая часть — текст */
+.ad-content-g {
+  flex: 1;
+  padding: 20px;
+}
+  .ad-title-g {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin: 0 0 6px 0;
+    padding-left: 10px;
+    text-align: center;
+  }
+  .ad-text-g {
+    font-size: 1.25vw;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+  }
+
+  /* Метка "Реклама" */
+  .ad-label-g {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #888888;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
 .content-block {
   display: flex;
   justify-content: space-between;
@@ -151,7 +221,6 @@
         transform: translateX(-50%);
         left: 30vw;
         margin-left: 8rem;
-
         max-width: 80%;
 
 
@@ -196,8 +265,8 @@
 
   /* Сама карточка */
   .ad-card {
-    width: 22vw;
-    height: 35vw;
+    width: 17vw;
+    height: 30vw;
     border: 2px solid #ffffff; /* серый цвет рамки */
     border-radius: 12px;
     overflow: hidden;
