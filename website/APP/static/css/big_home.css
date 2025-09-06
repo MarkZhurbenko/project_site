@@ -8,7 +8,7 @@
 
 /* Карточка */
 .ad-card-g {
-    margin-left: 2rem;
+    margin-left: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -86,6 +86,7 @@
 .text-paragraph {
   font-size: 1.4vw;
   width: 80%;
+  margin-top: 5rem;
   line-height: 1.6;
   color: #000000;
 }
@@ -94,6 +95,7 @@
   display: flex;
   gap: 20px;
   flex: 1;
+  margin-top: 10%;
 }
 
 .photo-column {
@@ -191,7 +193,9 @@
       
 }
 .scroll-button {
-
+  position: fixed;
+  margin-top: 10vh;
+  margin-top: 10vw;
   background: #4387ed;
   color: white;
   border: none;
@@ -200,6 +204,7 @@
   font-size: 1.2rem;
   padding: 20px 30px;
   z-index: 1; 
+  
 }
 
     body, html {
@@ -210,10 +215,13 @@
     }
     .hero {
       position: relative;
-      height: 100vh;
+      min-height: 56vw; /* было 90vh, уменьшай сюда */
+      height: 50rem;
+      width: 100%;
       overflow: hidden;
       display: flex;
     }
+
     .hero-content {
         z-index: 1;
         color: white;
@@ -264,10 +272,11 @@
   }
 
   /* Сама карточка */
-  .ad-card {
+.ad-card {
     width: 17vw;
-    height: 30vw;
-    border: 2px solid #ffffff; /* серый цвет рамки */
+    min-height: 14vw; /* минимальная высота, чтобы форма была похожа */
+    height: auto;     /* высота теперь подстраивается под текст */
+    border: 2px solid #ffffff;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -276,7 +285,7 @@
     color: inherit;
     position: relative;
     transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-  }
+}
 
   /* Hover эффект */
   .ad-card:hover {
@@ -305,7 +314,7 @@
     text-align: center;
   }
   .ad-text {
-    font-size: 1.1vw;
+    font-size: 1vw;
     color: #555;
     margin-bottom: 2rem;
     line-height: 1.3;
@@ -427,8 +436,28 @@
     }
     .text-museum{
         font-size: 5vw;
+        margin-left: 40%;
     }
     .text-mus-start{
+        font-size: 1.4vw;
+        width: 70%; margin-left: 1%;
+        /* в самом блоке html тоже есть style */
+
+    }
+    .text-museum2{
+        font-size: 5vw;
+    }
+    .text-mus-start2{
+        font-size: 1.4vw;
+        margin-right: 90px; 
+        /* в самом блоке html тоже есть style */
+
+    }
+    .text-museum3{
+        font-size: 5vw;
+        margin-left: 75%;
+    }
+    .text-mus-start3{
         font-size: 1.4vw;
         margin-right: 90px; 
         /* в самом блоке html тоже есть style */
