@@ -386,9 +386,21 @@
         padding-top: 20px;
         gap: 40px;
     }
+    .gallary-frunze{
+      display: flex;
+        padding-left: 17vw;
+        padding-top: 20px;
+        gap: 40px;
+    }
     .photo-mon{
         flex: 0 0 auto; /* Запрет на сжатие и растяжение */
         width: 40vw; /* Фиксированная ширина фотографии */
+        height: 30vw; /* Фиксированная высота фотографии */
+        border-radius: 5px;
+    }
+    .photo-frun{
+      flex: 0 0 auto; /* Запрет на сжатие и растяжение */
+        width: 25vw; /* Фиксированная ширина фотографии */
         height: 30vw; /* Фиксированная высота фотографии */
         border-radius: 5px;
     }
@@ -446,6 +458,7 @@
     }
     .text-museum2{
         font-size: 5vw;
+        margin-left: 36%;
     }
     .text-mus-start2{
         font-size: 1.4vw;
@@ -455,12 +468,21 @@
     }
     .text-museum3{
         font-size: 5vw;
-        margin-left: 75%;
+        margin-left: 81%;
     }
     .text-mus-start3{
         font-size: 1.4vw;
         margin-right: 90px; 
         /* в самом блоке html тоже есть style */
+    }
+    .text-museum4{
+        font-size: 5vw;
+        margin-left: 33%;
+    }
+    .text-mus-start4{
+        font-size: 1.4vw;
+        margin-left: 8%; 
+        margin-right: 8%;
 
     }
     .search-string{

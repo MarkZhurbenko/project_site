@@ -1,5 +1,18 @@
 
 @media screen and (max-width: 750px){
+  .gallary-frunze{
+      display: flex;
+        padding-left: 10vw;
+        padding-top: 20px;
+        gap: 40px;
+        
+    }
+  .photo-frun{
+      flex: 0 0 auto; /* Запрет на сжатие и растяжение */
+        width: 25vw; /* Фиксированная ширина фотографии */
+        height: 34vw; /* Фиксированная высота фотографии */
+        border-radius: 2px;
+    }
   .ad-title-g {
     font-size: 2.5vw;
     font-weight: bold;
@@ -363,6 +376,7 @@
         flex: 0 0 auto; /* Запрет на сжатие и растяжение */
         width: 44vw; /* Фиксированная ширина фотографии */
         height: 33.8vw; /* Фиксированная высота фотографии */
+        border-radius: 2px;
     }
     .gallery {
                 width: 100%; /* Ширина на весь экран */
@@ -410,13 +424,43 @@
     .text-museum{
         font-size: 7vw;
         margin-top: -2rem;
+        margin-left: 35%;
     }
     .text-mus-start{
         font-size: 3.5vw;
         width: 90%;
+        text-align: center;
     }
-    
-    
+        .text-museum3{
+        font-size: 5vw;
+        margin-left: 60%;
+    }
+    .text-paragraph{
+        font-size: 3.5vw;
+        margin-right: 90px; 
+        text-align: center;
+        margin-left: 15%;
+        /* в самом блоке html тоже есть style */}
+    .text-mus-start2{
+        font-size: 3.5vw;
+        margin-right: 90px; 
+        text-align: center;
+        margin-left: 15%;
+        /* в самом блоке html тоже есть style */}
+    .text-museum2{
+        font-size: 5vw;
+        margin-left: 32%;
+    }
+    .text-mus-start4{
+        font-size: 3.5vw;
+        margin-right: 90px; 
+        text-align: center;
+        margin-left: 15%;
+        /* в самом блоке html тоже есть style */}
+    .text-museum4{
+        font-size: 5vw;
+        margin-left: 32%;
+    }
     
     .search-string{
         padding-top: 27px;
