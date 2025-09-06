@@ -272,7 +272,9 @@
 
   /* Сама карточка */
   .ad-card {
-    width: 95%; /* вместо фиксированных 280px */
+    width: 95%;
+    min-height: 3vw; /* минимальная высота, чтобы форма была похожа */
+    height: auto;     /* высота теперь подстраивается под текст */
     border: 2px solid #888888; /* серый цвет рамки */
     border-radius: 10px;
     overflow: hidden;
@@ -282,7 +284,6 @@
     color: inherit;
     position: relative;
     transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-    height: 80vw;
 
   }
 
