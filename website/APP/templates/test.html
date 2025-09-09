@@ -1,83 +1,95 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Футер снизу</title>
+  <title>Меню как у Варламова</title>
   <style>
-    body {
+    body, html {
       margin: 0;
-      min-height: 100vh;         /* Страница минимум во весь экран */
+      padding: 0;
+    }
+
+    /* Hero блок с фоном */
+    .hero {
+      height: 100vh;
+      background: url('https://cdn.culture.ru/images/a200065e-34cc-5016-8514-0048237bd771') center/cover no-repeat;
       display: flex;
-      flex-direction: column;    /* Вертикальная колонка */
-    }
-
-    main {
-      flex: 1;                   /* Занимает всё доступное пространство */
-    }
-
-    footer {
-      background: #444;
+      justify-content: center;
+      align-items: center;
       color: white;
-      text-align: center;
-      padding: 15px;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    /* Меню */
+    .navbar {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 0;
+      transition: all 0.3s ease;
+      position: absolute; /* изначально поверх hero */
+      top: 0;
+      left: 0;
+    }
+
+    .navbar.fixed {
+      position: fixed; /* фиксируется при скролле */
+      top: 0;
+      left: 0;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    /* Контент ниже */
+    .content {
+      height: 200vh;
+      padding: 40px;
+      font-size: 1.3rem;
+      background: #f7f7f7;
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Контент</h1>
-    <p>Здесь может быть много текста...</p>
-    <p>Здесь может быть много текста...</p>
-    <p>Здесь может быть много текста...</p>
-    <p>Здесь может быть много текста...</p>
-    <p>Здесь может быть много текста...</p>
-    <p>Здесь может быть много текста...</p>
-    <p>Здесь может быть много текста...</p>
-    <p>Здесь может быть много текста...</p>
-    <p>Здесь может быть много текста...</p>
-    <p>Здесь может быть много текста...</p>
-    <p>Здесь может быть много текста...</p>
-    <p>Здесь может быть много текста...</p>
-    <p>Здесь может быть много текста...</p>
-    <p>Здесь может быть много текста...</p>
-    <p>Здесь может быть много текста...</p>
-    <p>Здесь может быть много текста...</p>
-  </main>
 
-  <footer>
-    Я всегда внизу!
-  </footer>
-  <p>Здесь может быть много текста...</p>
-  <p>Здесь может быть много текста...</p>
-  <p>Здесь может быть много текста...</p>
-  <p>Здесь может быть много текста...</p>
-  <p>Здесь может быть много текста...</p>
-  <var><p>Здесь может быть много текста...</p>
-  <var><p>Здесь может быть много текста...</p>
-  <p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<var><p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<var><p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<var><p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p>
-<p>Здесь может быть много текста...</p></var></var></var></var></var>
+  <div class="hero">
+    <div>Фоновое изображение</div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <a href="#">Главная</a>
+    <a href="#">Музеи</a>
+    <a href="#">Памятники</a>
+    <a href="#">Кафе</a>
+    <a href="#">Партнёрам</a>
+  </nav>
+
+  <div class="content">
+    <p>Длинный текст после hero...</p>
+    <p>Скролль вниз — и увидишь, как меню фиксируется сверху.</p>
+  </div>
+
+  <script>
+    const navbar = document.getElementById("navbar");
+    const heroHeight = document.querySelector(".hero").offsetHeight;
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= heroHeight) {
+        navbar.classList.add("fixed");
+      } else {
+        navbar.classList.remove("fixed");
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+{% extends 'base.html'%}                                                                                                                                                                                    
+{% load static %}    
+
+{%block css%}                                                                                                                                                                                               
+<link rel="stylesheet" href= "{% static 'css/big-sport.css' %}">                                                                                                                                        
+<link rel="stylesheet" href= "{% static 'css/small-sport.css' %}"> 
+<link rel="stylesheet" href= "{% static 'css/big_home.css' %}">
+<link rel="stylesheet" href= "{% static 'css/small_home.css' %}">                                                                                                                                     
+{%endblock%}      
+
+{%block footer%}                                                                                                                                                                                            
+ <button class="button-museum-home">                                                                                                                                                                    
+      <a href="{% url 'home' %}" class="link-museum-home">На главную</a>                                                                                                                                      
+  </button>                                                                                                                                                                                                   
+                                                                                                                                                                                                            
+{%endblock%} 
+
+{% block content %}
+
+
+
+{% endblock %}

@@ -30,6 +30,9 @@
                         <a href="{% url 'restaurant' %}">
                             <button class="menu-link">Кафе и рестораны</button>
                         </a><br><br>
+                        <a href="{% url 'sport' %}">
+                            <button class="menu-link">Cпорт и развлечения</button>
+                        </a><br><br>
                         <br><br>
                     </ul>
                 </div>
@@ -43,7 +46,7 @@
     <div class="footer-container">
         <div class="footer-section">
             <h3><span class="emoji">🔥</span> Хочешь связаться с нами?<br>Вот наши данные!</h3>
-            <p>✉️ mlol6519@gmail.com</p>
+            <p>✉️ markx0347@yandex.com</p>
             <p>📞 +7-967-310-22-55</p>
             <div class="social-links">
                 <a href="https://m.vk.com/id459053622"><i>VK</i></a>
@@ -55,21 +58,21 @@
         <div class="footer-section">
             <h3><span class="emoji">💬</span> Есть идеи?</h3>
             <p>Хочешь добавить новое место или знаешь лайфхак для туристов? Кидай предложения в личку!</p>
-            <p>Вместе сделаем город ещё круче! <span class="emoji">🤙</span></p>
         </div>
         
         <div class="footer-section">
-            <h3><span class="emoji">📸</span> Твой Новорос</h3>
+            <h3><span class="emoji">📸</span> Твой Новоросc</h3>
             <p>Делись своими тревел-сториз с хештегом:</p>
-            <span class="hashtag">#НоворосТоп</span>
+            <span class="hashtag">#НоворосcТоп</span>
             <p>Самые яркие фото попадут на главную!</p>
         </div>
         
         <div class="copyright">
-            <p>© 2025 Новороссийск – не просто город, а настроение! <span class="emoji">🌊</span></p>
+            <p>© 2024-2025 Новороссийск – не просто город, а настроение! <span class="emoji">🌊</span></p>
         </div>
     </div>
 </footer>
+
 
 </html>
 <script>
@@ -87,6 +90,16 @@
                 menu.classList.remove('active'); // Скрываем меню
             }
         });
+        const navbar = document.getElementById("navbar");
+    const hero = document.querySelector(".hero");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= hero.offsetHeight) {
+        navbar.classList.add("fixed");
+      } else {
+        navbar.classList.remove("fixed");
+      }
+    });
 
 
 </script>

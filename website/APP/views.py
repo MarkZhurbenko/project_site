@@ -17,3 +17,5 @@ def monuments(requests):
 def restaurant(requests):
     return render(requests, 'restaurant.html')
 
+def sport(requests):
+    return render(requests, 'sport.html')

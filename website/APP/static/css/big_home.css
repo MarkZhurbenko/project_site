@@ -1,5 +1,65 @@
 
 @media screen and (max-width:2100px) and (min-width: 751px){
+.ttt{
+  margin-top: -16px;
+}
+.text-home-logo-n{
+  font-size: 0.7rem;
+  margin-top: 4rem;
+  color: white;
+}
+.images-logo-novoross-n{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: -9%;
+    margin-top: 1.5rem;
+}
+.provodnik-n{
+    position: absolute;
+    font-size: 0.7rem;
+    transform: translate(-50%, -50%);
+    color: #ddd;
+    top: 7%;
+    left: 29%;
+    right: 30%;
+    font-weight: bold;
+
+    }
+
+.navbar {
+      width: 100%;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1px;
+      padding: 15px 0;
+      transition: all 0.3s ease;
+      position: absolute; /* изначально поверх hero */
+      top: 0;
+      left: -20%;
+      background: transparent;
+      z-index: 10;
+      
+    }
+
+.navbar.fixed {
+      position: fixed; /* фиксируется при скролле */
+      top: 0;
+      left: 0;
+      background: #2a5298;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+.navbar a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: bold;
+      
+    }
 /* Контейнер */
 .ad-container-g {
   width: 95%;
@@ -140,24 +200,26 @@
 }
 .menu-link-head1{
     position: absolute;
-    left: 53%;
+    left: 55%;
     top: 10%;
     font-size: 1rem;
+    color: white;
 }
 .menu-link-head2{
     position: absolute;
-    left: 79%;
+    left: 65%;
     top: 10%;
     font-size: 1rem;
+    color: white;
 }
 .menu-link-head3{
     position: absolute;
-    left: 110%;
+    left: 75%;
     top: 10%;
     font-size: 1rem;
     white-space: nowrap;
+    color: white;
 }
-
 .images-logo-novoross{
     width: 3.5rem;
     height: 3.5rem;
@@ -520,17 +582,7 @@
                 overflow-x: hidden; /* Запретить горизонтальную прокрутку */
         }
     .menu {
-        position: fixed;
-        right: -30vw; /* Скрываем меню за пределами экрана */
-        top: 0;
-        width:19vw;
-        height: 100%;
-        color: white;
-        transition: right 0.5s ease; /* Анимация для выезда меню */
-        padding: 20px;
-        background-color: #007BFF;
-         z-index: 999;
-                
+         display: none;             
         }
     .menu.active {
                 right: 0; /* Показываем меню */
@@ -538,19 +590,7 @@
                 padding-right: 50px;
             }
     .button {
-                position: fixed;
-                top:25px;
-                right: 20px;
-                padding: 7px 20px;
-                background-color: #007BFF;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                font-size: 1.3vw;
-                cursor: pointer;
-                margin-right: 50px;
-                margin-top: 10px;
-                z-index: 666;
+                display: none;     
             }
     .button:hover{
                 background-color:#014877;
