@@ -40,8 +40,8 @@
   color: white;
   z-index: 1;
   position: absolute;
-  left: 15%;
   top: 25%;
+  text-align: center;
 }
 
 .second-text-head-museum{

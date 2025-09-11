@@ -1,4 +1,7 @@
 @media screen and (max-width:2100px) and (min-width: 751px){
+.provodnik-none-dis{
+    display: none;
+}
 .hero-fon-sport {
   height: 90vh;
   background: url("/static/images/sport-fon.webp") center/cover no-repeat;
@@ -26,6 +29,7 @@
   color: white;
   z-index: 1;
   text-align: center;
+  margin-top: -50%;
 }
 .second-text-head-sport{
   font-size: 1.2rem;
