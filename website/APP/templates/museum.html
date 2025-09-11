@@ -4,48 +4,22 @@
 {%block css%}
 <link rel="stylesheet" href= "{% static 'css/big-museum.css' %}">
 <link rel="stylesheet" href= "{% static 'css/small-museum.css' %}">
+<link rel="stylesheet" href= "{% static 'css/big_home.css' %}">
+<link rel="stylesheet" href= "{% static 'css/small_home.css' %}">     
 
 
 {%endblock%}
-{%block footer%}                                                                                                                                                                                            
- <button class="button-museum-home">                                                                                                                                                                    
-      <a href="{% url 'home' %}" class="link-museum-home">На главную</a>                                                                                                                                      
-  </button>                                                                                                                                                                                                   
-                                                                                                                                                                                                            
-{%endblock%} 
 
 {%block content%}
+<div class = "provodnik-none-dis">
+            <img src='{%static "images/logo2.jpg"%}' class="images-logo-novoross-n">
+            <p class="text-home-logo-n">Проводник<br>
+            по достопримечательностям<br>
+            г. Новороссийск</p>
+        </div>
    <div class="hero52">
-  <div class="overlay"></div>
-
-  
-              <div class="flex">
-                
-            <div class = "provodnik">
-              <img src='{%static "images/logo2.jpg"%}' class="images-logo-novoross">
-                    <p class="text-home-logo">Проводник<br>
-                    по достопримечательностям<br>
-                    г. Новороссийск</p>
-                    <ul>
-                    <a href="{% url 'home' %}">
-                            <p class="menu-link-head4">Главная</p>
-                    </a>
-                      <a href="{% url 'museum' %}">
-                            <p class="menu-link-head1">Музеи</p>
-                        </a>
-                        <a href="{% url 'monuments' %}">
-                            <p class="menu-link-head2">Памятники</p>
-                        </a>
-                        <a href="{% url 'restaurant' %}">
-                            <p class="menu-link-head3">Кафе и рестораны</p>
-                        </a>
-
-                        
-                    </ul>
-                </div>
-                
-
-    </div>     
+  <div class="overlay-mus"></div>
+ 
   <h1 class="start-museum-text-head">МУЗЕИ ГОРОДА-ГЕРОЯ</h1>
   <p class="second-text-head-museum">Музеи Новороссийска — это окно в прошлое и настоящее города. Каждый экспонат рассказывает 
     уникальную историю и приглашает к увлекательному путешествию.</p>

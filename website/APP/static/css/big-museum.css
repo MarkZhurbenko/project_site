@@ -1,4 +1,7 @@
 @media screen and (max-width:2100px) and (min-width: 751px){
+.provodnik-none-dis{
+    display: none;
+}
 .menu-link-head4{
     position: absolute;
     left: 159%;
@@ -32,12 +35,13 @@
   margin-top: 15px;
   color: white;
   z-index: 1;
-    margin-left: 90px;
+  margin-left: 90px;
   margin-right: 90px;
+  text-align: center;
 }
 
 /* лёгкая затемняющая подложка */
-.overlay {
+.overlay-mus {
   position: absolute;
   top: 0;
   left: 0;

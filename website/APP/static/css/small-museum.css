@@ -1,4 +1,15 @@
 @media screen and (max-width: 750px){
+.provodnik-none-dis{
+    position: absolute;
+    font-size: 0.7rem;
+    transform: translate(-50%, -50%);
+    color: #ddd;
+    top: 5.5%;
+    left: 27%;
+    right: 30%;
+    font-weight: bold;
+    z-index: 4;
+    }  
 .menu-link-head4{
     position: absolute;
     left: 159%;
@@ -9,9 +20,8 @@
 
 .hero52 {
   height: 90vh;
-
   background: url("/static/images/mala-zem2.jpeg") center/cover no-repeat;
-  background-attachment: fixed; /* 🔑 эффект Варламова */
+  background-attachment: scroll; /* 🔑 эффект Варламова */
   display: flex;
   background-size: cover;
   background-position: center center;
@@ -47,7 +57,7 @@
 }
 
 /* лёгкая затемняющая подложка */
-.overlay {
+.overlay-mus {
   position: absolute;
   top: 0;
   left: 0;

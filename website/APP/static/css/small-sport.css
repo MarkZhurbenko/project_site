@@ -1,3 +1,97 @@
 @media screen and (max-width: 750px){
-    
+.hero-fon-sport {
+  height: 90vh;
+  background: url("/static/images/sport-fon.webp") center/cover no-repeat;
+  background-attachment: scroll; /* 🔑 эффект Варламова */
+  display: flex;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+}
+.overlay-sport{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+.start-sport-text-head{
+  font-size: 1.8rem;
+  width: 80%;
+  margin: 0;
+  color: white;
+  z-index: 1;
+  text-align: center;
+}
+.second-text-head-sport{
+  font-size: 0.9rem;
+  margin-top: 15px;
+  color: white;
+  z-index: 1;
+  margin-left: 90px;
+  margin-right: 90px;
+  text-align: center;
+}
+
+.photo-large-sport {
+  height: 63vw; /* на 4px выше и ниже, чем суммарная высота двух маленьких */
+  width: 35vw;
+  border-radius: 3px;
+  display: block;
+  object-fit: cover;
+  margin-top: 2rem;
+}
+.photo-small-sport {
+  width: 50vw;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.photo-section-sport {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  margin-left: 5%;
+  margin-bottom: 30px;
+}
+.photo-column-sport {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 2rem;
+
+}
+.text-sport{
+    font-size: 2rem;
+    text-align: center;
+}
+.text-sport-start{
+    font-size: 3.4vw;
+    margin-left: 8%; 
+    margin-right: 8%;
+
+    }
+.link-sport{
+    font-size: 3.2vw;
+    padding-bottom: 4px;
+}
+.button-sport{
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #007BFF;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 3vw;
+  margin-left: 8%;
+}
 }

@@ -11,33 +11,55 @@
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
     {%block css%}{%endblock%}
 </head>
+<ul class="ttt">
+    <nav class="navbar" id="navbar">
+        <div class = "provodnik">
+              <img src='{%static "images/logo2.jpg"%}' class="images-logo-novoross-n">
+                    <p class="text-home-logo-n">Проводник<br>
+                    по достопримечательностям<br>
+                    г. Новороссийск</p>
+            </div>
+            
+        <a href="{% url 'museum' %}">
+            <p class="menu-link-head1">Музеи</p>
+        </a>
+        <a href="{% url 'monuments' %}">
+            <p class="menu-link-head2">Памятники</p>
+        </a>
+        <a href="{% url 'restaurant' %}">
+            <p class="menu-link-head3">Кафе и рестораны</p>
+        </a>
+        <a href="{% url 'sport' %}">
+            <p class="menu-link-head5">Спорт и развлечения</p>
+        </a>
+        <a href="{% url 'home' %}">
+            <p class="menu-link-head4">Главная</p>
+        </a>
+    </nav>                 
+</ul>
+            <div class="knopka"> 
+                    <button class="button" onclick="toggleMenu()">Меню</button>
+                    <div class="menu" id="menu">
+                        <h2 class="vozm-stor">Возможные направления:</h2>
+                        <ul>
 
-
-<div class="knopka"> 
-                <button class="button" onclick="toggleMenu()">Меню</button>
-                <div class="menu" id="menu">
-                    <h2 class="vozm-stor">Возможные направления:</h2>
-                    <ul>
-                        <a href="{% url 'home' %}">
-                            <button class="menu-link">Главная</button>
-                        </a><br><br>
-                        <a href="{% url 'museum' %}">
-                            <button class="menu-link">Музеи</button>
-                        </a><br><br>
-                        <a href="{% url 'monuments' %}">
-                            <button class="menu-link">Памятники</button>
-                        </a><br><br>
-                        <a href="{% url 'restaurant' %}">
-                            <button class="menu-link">Кафе и рестораны</button>
-                        </a><br><br>
-                        <a href="{% url 'sport' %}">
-                            <button class="menu-link">Cпорт и развлечения</button>
-                        </a><br><br>
-                        <br><br>
-                    </ul>
-                </div>
+                            <a href="{% url 'museum' %}">
+                                <button class="menu-link">Музеи</button>
+                            </a><br><br>
+                            <a href="{% url 'monuments' %}">
+                                <button class="menu-link">Памятники</button>
+                            </a><br><br>
+                            <a href="{% url 'restaurant' %}">
+                                <button class="menu-link">Кафе и рестораны</button>
+                            </a><br><br>
+                            <a href="{% url 'sport' %}">
+                                <button class="menu-link">Cпорт и развлечения</button>
+                            </a><br><br>
+                            <br><br>
+                        </ul>
+                    </div>
             </div>  
-   
+
 
 {%block content%}
 
@@ -75,31 +97,42 @@
 
 
 </html>
+
 <script>
     function toggleMenu() {
         const menu = document.getElementById('menu');
         menu.classList.toggle('active');
     }
+
     document.addEventListener('click', function(event) {
-            const menu = document.getElementById('menu');
-            const button = document.querySelector('.button');
-            const isClickInsideMenu = menu.contains(event.target);
-            const isClickInsideButton = button.contains(event.target);
+        const menu = document.getElementById('menu');
+        const button = document.querySelector('.button');
+        const isClickInsideMenu = menu.contains(event.target);
+        const isClickInsideButton = button.contains(event.target);
 
-            if (menu.classList.contains('active') && !isClickInsideMenu && !isClickInsideButton) {
-                menu.classList.remove('active'); // Скрываем меню
-            }
-        });
-        const navbar = document.getElementById("navbar");
-    const hero = document.querySelector(".hero");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY >= hero.offsetHeight) {
-        navbar.classList.add("fixed");
-      } else {
-        navbar.classList.remove("fixed");
-      }
+        if (menu.classList.contains('active') && !isClickInsideMenu && !isClickInsideButton) {
+            menu.classList.remove('active');
+        }
     });
 
+    function scrollToTarget() {
+      document.getElementById("target").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
 
+    // 📌 ВАЖНО: вынес обработчик отдельно
+    document.addEventListener("DOMContentLoaded", () => {
+      const navbar = document.getElementById("navbar");
+      const hero = document.querySelector(".hero");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY >= hero.offsetHeight) {
+          navbar.classList.add("fixed");
+        } else {
+          navbar.classList.remove("fixed");
+        }
+      });
+    });
 </script>

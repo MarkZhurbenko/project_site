@@ -21,12 +21,12 @@
 {% block header %}
 <ul class="ttt">
     <nav class="navbar" id="navbar">
-        <div class = "provodnik-n">
+        <div class = "provodnik">
               <img src='{%static "images/logo2.jpg"%}' class="images-logo-novoross-n">
                     <p class="text-home-logo-n">Проводник<br>
                     по достопримечательностям<br>
                     г. Новороссийск</p>
-            </div>
+        </div>
             
         <a href="{% url 'museum' %}">
             <p class="menu-link-head1">Музеи</p>
@@ -36,6 +36,9 @@
         </a>
         <a href="{% url 'restaurant' %}">
             <p class="menu-link-head3">Кафе и рестораны</p>
+        </a>
+        <a href="{% url 'sport' %}">
+            <p class="menu-link-head5">Спорт и развлечения</p>
         </a>
     </nav>                 
 </ul>
@@ -60,6 +63,13 @@
                             <br><br>
                         </ul>
                     </div>
+        <div class = "provodnik">
+            <img src='{%static "images/logo2.jpg"%}' class="images-logo-novoross-n">
+            <p class="text-home-logo-n">Проводник<br>
+            по достопримечательностям<br>
+            г. Новороссийск</p>
+        </div>
+                    
             </div>  
     <div class="hero">
         <div class="hero-bg"></div>
@@ -68,15 +78,6 @@
 
     <div class="hero-content">
                 <div class="flex">
-          <div class = "provodnik">
-              <img src='{%static "images/logo2.jpg"%}' class="images-logo-novoross">
-                    <p class="text-home-logo">Проводник<br>
-                    по достопримечательностям<br>
-                    г. Новороссийск</p>
-            
-                    
-            </div>
-
 
     </div>
       <div class="hero-text">

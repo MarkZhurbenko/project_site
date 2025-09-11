@@ -1,5 +1,9 @@
 
 @media screen and (max-width: 750px){
+
+  .ttt{
+    display: none;
+  }
   .gallary-frunze{
       display: flex;
         padding-left: 10vw;
@@ -145,7 +149,7 @@
 }
 
 
-.text-home-logo{
+.text-home-logo-n{
     display: none;
 }
 .menu-link-head1{
@@ -170,7 +174,7 @@
     white-space: nowrap;
     display: none;
 }
-.images-logo-novoross{
+.images-logo-novoross-n{
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 10px;
@@ -178,6 +182,7 @@
     position: absolute;
     top: 1%;
     left: 1%;
+    z-index: 777;
 }
 .provodnik{
     position: absolute;
@@ -188,6 +193,7 @@
     left: 17%;
     right: 30%;
     font-weight: bold;
+    z-index: 4;
 
     }      
 .novo-start-text{
