@@ -175,14 +175,15 @@
     display: none;
 }
 .images-logo-novoross-n{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 9rem;
+    height: 9rem;
     border-radius: 10px;
     transform: translate(-50%, -50%);
     position: absolute;
     top: 1%;
-    left: 1%;
+    left: 4%;
     z-index: 777;
+    margin-left: 2rem;
 }
 .provodnik{
     position: absolute;
