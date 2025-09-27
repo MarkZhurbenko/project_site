@@ -10,8 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Путеводитель по Новороссийску</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Yandex.RTB -->
+    <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/logo-marx-gol.png' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo-marx-gol.png' %}" type="image/png">
+    
     
     
 </head>
@@ -92,6 +99,7 @@
     <div id="target"></div>
 {%endblock%}
 
+    <!-- Yandex.RTB R-A-17332934-1 -->
 
     <div class="text-map">
         <p class="start-text">Добро пожаловать в Новороссийск — город, богатый историей и культурой! Здесь расположено более 100 памятников, каждый из которых рассказывает уникальную историю. 
@@ -224,7 +232,7 @@
         <div>
             <img src="{%static 'images/monument1.webp'%}" class="photo-mon">
         </div>        
-        <div class="photo-mon">
+        <div>
             <img src="{%static 'images/monument2.webp'%}" class="photo-mon">
         </div>
     </div>

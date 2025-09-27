@@ -467,20 +467,20 @@
     }
     .gallary-frunze{
       display: flex;
-        padding-left: 17vw;
+        padding-left: 7vw;
         padding-top: 20px;
         gap: 40px;
     }
     .photo-mon{
         flex: 0 0 auto; /* Запрет на сжатие и растяжение */
-        width: 40vw; /* Фиксированная ширина фотографии */
-        height: 30vw; /* Фиксированная высота фотографии */
+        width: 55vw; /* Фиксированная ширина фотографии */
+        height: auto; /* Фиксированная высота фотографии */
         border-radius: 5px;
     }
     .photo-frun{
       flex: 0 0 auto; /* Запрет на сжатие и растяжение */
-        width: 25vw; /* Фиксированная ширина фотографии */
-        height: 30vw; /* Фиксированная высота фотографии */
+        width: 30vw; /* Фиксированная ширина фотографии */
+        height: 40vw; /* Фиксированная высота фотографии */
         border-radius: 5px;
     }
     .gallery {

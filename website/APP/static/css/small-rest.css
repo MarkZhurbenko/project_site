@@ -1,18 +1,20 @@
 @media screen and (max-width: 750px){
-
+.button-museum{
+  margin-left: 15%;
+}
 .menu-link-head4{
     display: none;
 }
   .photo-rest2{
   flex: 0 0 auto; /* Запрет на сжатие и растяжение */
-        width: 36vw; /* Фиксированная ширина фотографии */
-        height: 50vw; /* Фиксированная высота фотографии */
+        width: 70vw; /* Фиксированная ширина фотографии */
+        height: auto; /* Фиксированная высота фотографии */
         border-radius: 5px;
 
 }
 .photo-rest1{
-  width: 53vw;
-  height: 11,4vw;
+  width: 93vw;
+  height: auto;
   padding-left: 1vw;
   padding-top: 20px;
   border-radius: 5px;
@@ -48,6 +50,7 @@
         font-weight: bold;
         text-align: center;
         padding: 0 10px;
+        margin-top: 50%;
         word-wrap: break-word;
       }
 }

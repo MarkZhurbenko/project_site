@@ -5,7 +5,6 @@
     display: none;
   }
   .gallary-frunze{
-      display: flex;
         padding-left: 10vw;
         padding-top: 20px;
         gap: 40px;
@@ -13,9 +12,10 @@
     }
   .photo-frun{
       flex: 0 0 auto; /* Запрет на сжатие и растяжение */
-        width: 25vw; /* Фиксированная ширина фотографии */
-        height: 34vw; /* Фиксированная высота фотографии */
+        width: 60vw; /* Фиксированная ширина фотографии */
+        height: auto; /* Фиксированная высота фотографии */
         border-radius: 2px;
+        
     }
   .ad-title-g {
     font-size: 2.5vw;
@@ -100,13 +100,14 @@
 .text-section {
   flex: 1;
   max-width: 50%; /* текст занимает левую половину */
+  text-align: center;
 }
 
 .text-paragraph {
   font-size: 3.5vw;
-  width: 170%;
-  line-height: 1.6;
+  text-align: center;
   color: #000000;
+  width: 180%;
 
   /* в двух блоках есть еще стили */
 }
@@ -375,16 +376,16 @@
         font-size: 4.3vw;
     }
     .gallary-monuments{
-        display: flex;
-        padding-left: 10px;
+        text-align: center;
         padding-top: 20px;
         gap: 20px;
     }
     .photo-mon{
         flex: 0 0 auto; /* Запрет на сжатие и растяжение */
-        width: 44vw; /* Фиксированная ширина фотографии */
-        height: 33.8vw; /* Фиксированная высота фотографии */
-        border-radius: 2px;
+        width: 84vw; /* Фиксированная ширина фотографии */
+        height: auto; /* Фиксированная высота фотографии */
+        border-radius: 5px;
+        text-align: center;
     }
     .gallery {
                 width: 100%; /* Ширина на весь экран */
@@ -431,17 +432,19 @@
     }
     .text-museum{
         font-size: 7vw;
-        margin-top: -2rem;
-        margin-left: 35%;
+        text-align: center;
+        margin-right: 3vw;
     }
     .text-mus-start{
         font-size: 3.5vw;
         width: 90%;
         text-align: center;
+        margin-left: 3vw;
     }
-        .text-museum3{
-        font-size: 5vw;
-        margin-left: 60%;
+    .text-museum3{
+        font-size: 7vw;
+        text-align: center;
+        margin-left: 49%;
     }
     .text-paragraph{
         font-size: 3.5vw;
@@ -451,23 +454,22 @@
         /* в самом блоке html тоже есть style */}
     .text-mus-start2{
         font-size: 3.5vw;
-        margin-right: 90px; 
         text-align: center;
-        margin-left: 15%;
         /* в самом блоке html тоже есть style */}
     .text-museum2{
-        font-size: 5vw;
-        margin-left: 32%;
+        font-size: 7vw;
+        text-align: center;
     }
     .text-mus-start4{
         font-size: 3.5vw;
-        margin-right: 90px; 
         text-align: center;
-        margin-left: 15%;
+        margin-left: 9vw;
+        margin-right: 3vw;
         /* в самом блоке html тоже есть style */}
     .text-museum4{
-        font-size: 5vw;
-        margin-left: 32%;
+        font-size: 7vw;
+        text-align: center;
+        margin-left: 3vw;
     }
     
     .search-string{
@@ -564,10 +566,10 @@
     
     }
     .start-text{
-        width: 90%;
-        margin-top: 10px;
         font-size: 3.5vw;
-        margin-left: 20px;
+        text-align: center;
+        margin-left: 5vw;
+        margin-right: 3vw;
     }
     .text-map{
         padding-top: 20px;
