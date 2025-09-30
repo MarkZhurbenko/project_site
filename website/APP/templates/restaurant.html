@@ -50,5 +50,81 @@
         <img src="{%static 'images/gurman2.webp'%}" class="photo-rest2">
     </div>
 </div><br><br>
+    <div class="content-block">
+  <div class="text-section">
+    <h1 class="text-rest3">Коффеин</h1>
+    <p class="text-paragraph">
+      «Коффеин» — это уютная семейная кофейня, которая уже успела полюбиться жителям и гостям города. 
+    Здесь ценят качество, детали и атмосферу, поэтому каждый визит превращается в маленький праздник вкуса и уюта.
+    Главная особенность кофейни — это честный кофе из отборного зерна. Напитки получаются насыщенными, ароматными и 
+    сбалансированными — именно такими, какими их ждут истинные любители кофе.
+    Интерьер кофейни создаёт ощущение спокойствия и уюта. Это место, где одинаково приятно взять кофе навынос перед работой, 
+    провести встречу с друзьями или уединиться с ноутбуком за чашкой капучино. Дружелюбный сервис, внимательное 
+    отношение и та самая атмосфера, из-за которой хочется возвращаться снова и снова.
+    </p>
+  </div>
+  
+  <div class="photo-section">
+    <div class="photo-column">
+      <img src="{% static 'images/koffein-rest.webp' %}" alt="Фото 1" class="photo-small">
+      <img src="{% static 'images/koffein-rest2.jpeg' %}" alt="Фото 2" class="photo-small">
+    </div>
+    <div class="photo-large-container">
+      <img src="{% static 'images/koffein-rest1.webp' %}" alt="Фото 3" class="photo-large">
+    </div>
+  </div>
+</div>
+<div class="koffein-menu">
+    <div class="carousel" id="carousel">
+        <div class="slide visible"><img src="{% static 'images/k3.webp' %}" alt=""></div>
+        <div class="slide"><img src="{% static 'images/k2.webp' %}" alt=""></div>
+        <div class="slide"><img src="{% static 'images/k5.webp' %}" alt=""></div>
+        <div class="slide"><img src="{% static 'images/k4.webp' %}" alt=""></div>
+
+        <div class="nav">
+            <button class="btn" id="prevBtn">&#10094;</button>
+            <button class="btn" id="nextBtn">&#10095;</button>
+        </div>
+    </div>
+
+    <p class="text-koffein-menu">Меню небольшое, но в этом и есть его изюминка: каждая позиция продумана до мелочей. Среди хитов — вафли с лососем и 
+    фирменным авокадо-муссом, который готовится по особому рецепту и встречается только здесь. На завтрак можно выбрать 
+    как сытные блюда, так и лёгкие десерты, а в обед — насладиться сочетанием кофе и свежих закусок.<br><br>
+    📍 ул. Анапское шоссе 10<br>
+    🕙 каждый день с 8.00 до 20.00, в воскресенье с 10.00 до 20.00
+ </p>
+</div>
+
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((s, i) => s.classList.toggle('visible', i === index));
+    current = index;
+  }
+
+  function next() {
+    let i = (current + 1) % slides.length;
+    showSlide(i);
+  }
+
+  function prev() {
+    let i = (current - 1 + slides.length) % slides.length;
+    showSlide(i);
+  }
+
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+
+  // управление стрелками клавиатуры
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') next();
+    if (e.key === 'ArrowLeft') prev();
+  });
+</script>
 
 {% endblock %}              

@@ -1,95 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Меню как у Варламова</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Photo Carousel — Коффеин</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+  }
 
-    /* Hero блок с фоном */
-    .hero {
-      height: 100vh;
-      background: url('https://cdn.culture.ru/images/a200065e-34cc-5016-8514-0048237bd771') center/cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 2.5rem;
-      font-weight: bold;
-    }
+  .carousel {
+    position: relative;
+    width: 80%;      /* ширина блока */
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  }
 
-    /* Меню */
-    .navbar {
-      width: 100%;
-      background: rgba(255, 255, 255, 0.9);
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 15px 0;
-      transition: all 0.3s ease;
-      position: absolute; /* изначально поверх hero */
-      top: 0;
-      left: 0;
-    }
+  .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
 
-    .navbar.fixed {
-      position: fixed; /* фиксируется при скролле */
-      top: 0;
-      left: 0;
-      background: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
+  .slide.visible {
+    opacity: 1;
+  }
 
-    .navbar a {
-      text-decoration: none;
-      color: black;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
 
-    /* Контент ниже */
-    .content {
-      height: 200vh;
-      padding: 40px;
-      font-size: 1.3rem;
-      background: #f7f7f7;
-    }
-  </style>
+  .nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn:hover {
+    background: rgba(0,0,0,0.8);
+  }
+</style>
 </head>
 <body>
 
-  <div class="hero">
-    <div>Фоновое изображение</div>
+<div class="carousel" id="carousel">
+  <div class="slide visible"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=900&q=80" alt=""></div>
+  <div class="slide"><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=900&q=80" alt=""></div>
+  <div class="slide"><img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=900&q=80" alt=""></div>
+
+  <div class="nav">
+    <button class="btn" id="prevBtn">&#10094;</button>
+    <button class="btn" id="nextBtn">&#10095;</button>
   </div>
+</div>
 
-  <nav class="navbar" id="navbar">
-    <a href="#">Главная</a>
-    <a href="#">Музеи</a>
-    <a href="#">Памятники</a>
-    <a href="#">Кафе</a>
-    <a href="#">Партнёрам</a>
-  </nav>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  let current = 0;
 
-  <div class="content">
-    <p>Длинный текст после hero...</p>
-    <p>Скролль вниз — и увидишь, как меню фиксируется сверху.</p>
-  </div>
+  function showSlide(index) {
+    slides.forEach((s, i) => s.classList.toggle('visible', i === index));
+    current = index;
+  }
 
-  <script>
-    const navbar = document.getElementById("navbar");
-    const heroHeight = document.querySelector(".hero").offsetHeight;
+  function next() {
+    let i = (current + 1) % slides.length;
+    showSlide(i);
+  }
 
-    window.addEventListener("scroll", () => {
-      if (window.scrollY >= heroHeight) {
-        navbar.classList.add("fixed");
-      } else {
-        navbar.classList.remove("fixed");
-      }
-    });
-  </script>
+  function prev() {
+    let i = (current - 1 + slides.length) % slides.length;
+    showSlide(i);
+  }
+
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+
+  // управление стрелками клавиатуры
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') next();
+    if (e.key === 'ArrowLeft') prev();
+  });
+</script>
+
 </body>
 </html>
