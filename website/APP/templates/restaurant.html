@@ -75,17 +75,11 @@
   </div>
 </div>
 <div class="koffein-menu">
-    <div class="carousel" id="carousel">
-        <div class="slide visible"><img src="{% static 'images/k3.webp' %}" alt=""></div>
-        <div class="slide"><img src="{% static 'images/k2.webp' %}" alt=""></div>
-        <div class="slide"><img src="{% static 'images/k5.webp' %}" alt=""></div>
-        <div class="slide"><img src="{% static 'images/k4.webp' %}" alt=""></div>
-
-        <div class="nav">
-            <button class="btn" id="prevBtn">&#10094;</button>
-            <button class="btn" id="nextBtn">&#10095;</button>
-        </div>
-    </div>
+  <div class="slider">
+    <button class="btn left" onclick="prevSlide()">&#10094;</button>
+    <button class="btn right" onclick="nextSlide()">&#10095;</button>
+    <img id="slide" src="{% static 'images/k3.webp' %}" alt="image">
+  </div>
 
     <p class="text-koffein-menu">Меню небольшое, но в этом и есть его изюминка: каждая позиция продумана до мелочей. Среди хитов — вафли с лососем и 
     фирменным авокадо-муссом, который готовится по особому рецепту и встречается только здесь. На завтрак можно выбрать 
@@ -97,34 +91,30 @@
 
 
 <script>
-  const slides = document.querySelectorAll('.slide');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  let current = 0;
+      const images = [
+      "{% static 'images/k1.webp' %}",
+      "{% static 'images/k2.webp' %}",
+      "{% static 'images/k5.webp' %}",
+      "{% static 'images/k4.webp' %}",
+      "{% static 'images/k3.webp' %}"
+    ];
+    
+    let current = 0;
+    const slide = document.getElementById("slide");
 
-  function showSlide(index) {
-    slides.forEach((s, i) => s.classList.toggle('visible', i === index));
-    current = index;
-  }
+    function showSlide(index) {
+      slide.src = images[index];
+    }
 
-  function next() {
-    let i = (current + 1) % slides.length;
-    showSlide(i);
-  }
+    function prevSlide() {
+      current = (current - 1 + images.length) % images.length;
+      showSlide(current);
+    }
 
-  function prev() {
-    let i = (current - 1 + slides.length) % slides.length;
-    showSlide(i);
-  }
-
-  nextBtn.addEventListener('click', next);
-  prevBtn.addEventListener('click', prev);
-
-  // управление стрелками клавиатуры
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') next();
-    if (e.key === 'ArrowLeft') prev();
-  });
+    function nextSlide() {
+      current = (current + 1) % images.length;
+      showSlide(current);
+    }
 </script>
 
 {% endblock %}              

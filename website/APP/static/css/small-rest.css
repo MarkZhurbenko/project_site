@@ -20,65 +20,54 @@
   padding-top: 1rem;
 
 }
-.carousel {
+/* Для маленьких экранов */
+.slider {
   position: relative;
-  width: 100%;       /* ширина галереи */
-  max-width: 900px;
-  height: 500px;    /* ставим конкретную высоту */
-  overflow: hidden; /* лишнее скрывается */
+  width: 80%;          /* занимает всю ширину экрана */
+  max-width: 800px;     /* но не шире 800px */
+  height: auto;         /* высота автоматически */
+  aspect-ratio: 16/10;  /* сохраняем пропорции */
+  overflow: hidden;
   border-radius: 10px;
-    margin-top: 2rem;
-    margin-bottom: -3rem;
-    margin-left: 5%;
-  }
+  background: #ffffff;
+  margin: 0 auto;       /* центрируем */
+}
 
-.slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 
-.slide.visible {
-    opacity: 1;
-  }
-
-.slide img {
-  max-width: 100%;
-  max-height: 80%;
-  object-fit: scale-down; 
-  margin-left: 10%;
-
-  }
-
-.nav {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    box-sizing: border-box;
-  }
-
+/* Кнопки остаются по бокам */
 .btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background: rgba(0,0,0,0.5);
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 2.5rem;
-  }
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 10;
+  transition: background 0.3s;
+}
 
 .btn:hover {
-    background: rgba(0,0,0,0.8);
-  }
+  background: rgba(0,0,0,0.7);
+}
+
+.btn.left {
+  left: 0;               /* прижата к левому краю */
+  border-radius: 0 8px 8px 0;
+}
+
+.btn.right {
+  right: 0;              /* прижата к правому краю */
+  border-radius: 8px 0 0 8px;
+}
 .button-museum{
   margin-left: 15%;
 }
